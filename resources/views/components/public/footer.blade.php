@@ -14,10 +14,10 @@
                     <h3 class="font-display font-bold text-2xl mb-2">Stay Updated</h3>
                     <p class="text-slate-400">Get the latest news about admissions and events.</p>
                 </div>
-                <div class="flex w-full max-w-md gap-3">
-                    <input type="email" placeholder="Enter your email" 
+                <div class="flex flex-col sm:flex-row w-full max-w-md gap-3">
+                    <input type="email" placeholder="Enter your email"
                         class="flex-1 px-5 py-3 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all">
-                    <button class="btn-primary px-6">
+                    <button class="btn-primary px-6 w-full sm:w-auto">
                         Subscribe
                     </button>
                 </div>

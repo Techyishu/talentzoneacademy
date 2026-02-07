@@ -220,17 +220,17 @@
                     </p>
 
                     {{-- Stats Row --}}
-                    <div class="grid grid-cols-3 gap-8 mb-12 max-w-2xl mx-auto">
-                        <div>
-                            <div class="text-5xl font-bold mb-2" style="color: #E31E24;">3</div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-12 max-w-2xl mx-auto">
+                        <div class="text-center sm:text-left">
+                            <div class="text-4xl sm:text-5xl font-bold mb-2" style="color: #E31E24;">3</div>
                             <div class="text-sm text-slate-600">Premium Campuses</div>
                         </div>
-                        <div>
-                            <div class="text-5xl font-bold mb-2" style="color: #003B71;">29+</div>
+                        <div class="text-center sm:text-left">
+                            <div class="text-4xl sm:text-5xl font-bold mb-2" style="color: #003B71;">29+</div>
                             <div class="text-sm text-slate-600">Years Excellence</div>
                         </div>
-                        <div>
-                            <div class="text-5xl font-bold mb-2" style="color: #E31E24;">98%</div>
+                        <div class="text-center sm:text-left">
+                            <div class="text-4xl sm:text-5xl font-bold mb-2" style="color: #E31E24;">98%</div>
                             <div class="text-sm text-slate-600">Success Rate</div>
                         </div>
                     </div>
@@ -332,7 +332,7 @@
     {{-- Metrics Strip --}}
     <section class="py-16 relative overflow-hidden" style="background-color: #2B2826;">
         <div class="container-custom relative">
-            <div class="grid md:grid-cols-3 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                 {{-- Schools Stat --}}
                 <div class="flex items-center gap-6">
                     <div class="flex-shrink-0 w-20 h-20 rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #FF6B35 0%, #FF8C61 100%);">
@@ -387,7 +387,7 @@
                 </h2>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 {{-- Letter Identification --}}
                 <div class="text-center group">
                     <div class="relative mb-6">
@@ -582,7 +582,7 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
                 @forelse($galleryImages as $image)
                     <div class="aspect-square rounded-2xl bg-gradient-to-br from-slate-200 to-slate-300 overflow-hidden group cursor-pointer relative">
                         <img src="{{ asset('storage/' . $image->image_path) }}" alt="{{ $image->title }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">

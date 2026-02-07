@@ -56,7 +56,7 @@
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 @foreach($schools as $index => $school)
                     <x-public.school-card :school="$school" :index="$index" />
                 @endforeach

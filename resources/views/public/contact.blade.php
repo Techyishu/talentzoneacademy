@@ -73,7 +73,7 @@
                             
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-2">Preferred Campus *</label>
-                                <div class="grid grid-cols-3 gap-3">
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                                     @foreach($schools as $school)
                                         @php
                                             $colorClass = match($school['color']) {
