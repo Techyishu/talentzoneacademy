@@ -1,0 +1,12 @@
+# Deny access to all files in Laravel root
+# This file goes in /home/username/schoolsuite/.htaccess
+# It prevents direct access to Laravel app files
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(.*)$ - [F,L]
+</IfModule>
+
+# Deny access to everything
+Order Deny,Allow
+Deny from all
