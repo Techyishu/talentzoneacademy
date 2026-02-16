@@ -108,11 +108,16 @@ use App\Http\Controllers\Admin\FeeGenerationController;
 use App\Http\Controllers\Admin\PublicReviewController;
 use App\Http\Controllers\Admin\BackgroundMusicController;
 use App\Http\Controllers\Admin\HomepageVideoController;
+use App\Http\Controllers\Admin\PasswordController;
 
 
 Route::middleware(['auth', 'set_school'])->prefix('admin')->name('admin.')->group(function () {
     // Dashboard
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+    // Change Own Password (all admin users)
+    Route::get('password', [PasswordController::class, 'edit'])->name('password.edit');
+    Route::put('password', [PasswordController::class, 'update'])->name('password.update');
 
     // Portal Users Management
     Route::resource('portal-users', PortalUserController::class);
@@ -131,6 +136,10 @@ Route::middleware(['auth', 'set_school'])->prefix('admin')->name('admin.')->grou
     // School Switcher (Super Admin only)
     Route::middleware('super_admin')->group(function () {
         Route::post('/switch-school', [SchoolSwitchController::class, 'switch'])->name('switch-school');
+
+        // Reset School Admin Passwords
+        Route::get('users/{user}/password', [PasswordController::class, 'editUser'])->name('users.password.edit');
+        Route::put('users/{user}/password', [PasswordController::class, 'updateUser'])->name('users.password.update');
 
         // Schools Management
         Route::resource('schools', SchoolController::class);

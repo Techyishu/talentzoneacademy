@@ -175,6 +175,7 @@
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Role</th>
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Created</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
@@ -193,6 +194,15 @@
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
                                         {{ $user->created_at->format('M d, Y') }}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                        @if($user->role === 'school_admin')
+                                            <a href="{{ route('admin.users.password.edit', $user) }}" class="text-indigo-600 hover:text-indigo-900 font-medium">
+                                                Reset Password
+                                            </a>
+                                        @else
+                                            <span class="text-gray-400">&mdash;</span>
+                                        @endif
                                     </td>
                                 </tr>
                             @endforeach
