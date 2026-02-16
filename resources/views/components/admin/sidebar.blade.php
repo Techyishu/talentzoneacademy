@@ -16,11 +16,11 @@
                     <img src="{{ asset('uploads/logos/' . $activeSchool->logo) }}" alt="{{ $activeSchool->name }}"
                         class="h-8 w-8 rounded-lg object-cover">
                 @else
-                    <img src="{{ asset('images/logo.png') }}" alt="SchoolSuite"
+                    <img src="{{ asset('images/logo.png') }}" alt="TalentZone Academy"
                         class="h-8 w-8 rounded-lg object-cover bg-white">
                 @endif
                 <span class="text-sm font-semibold text-white">
-                    {{ $activeSchool ? $activeSchool->name : 'SchoolSuite' }}
+                    {{ $activeSchool ? $activeSchool->name : 'TalentZone Academy' }}
                 </span>
             </div>
 
@@ -303,11 +303,11 @@
                     <img src="{{ asset('uploads/logos/' . $activeSchool->logo) }}" alt="{{ $activeSchool->name }}"
                         class="h-8 w-8 rounded-lg object-cover">
                 @else
-                    <img src="{{ asset('images/logo.png') }}" alt="SchoolSuite"
+                    <img src="{{ asset('images/logo.png') }}" alt="TalentZone Academy"
                         class="h-8 w-8 rounded-lg object-cover bg-white">
                 @endif
                 <span class="text-sm font-semibold text-white truncate">
-                    {{ $activeSchool ? $activeSchool->name : 'SchoolSuite' }}
+                    {{ $activeSchool ? $activeSchool->name : 'TalentZone Academy' }}
                 </span>
             </div>
         </div>

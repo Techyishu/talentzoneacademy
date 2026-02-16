@@ -86,7 +86,7 @@
                                         <label class="relative cursor-pointer">
                                             <input type="radio" name="school" value="{{ $school['slug'] }}" class="peer sr-only">
                                             <div class="p-4 text-center rounded-xl border-2 border-slate-200 {{ $colorClass }} transition-all hover:border-slate-300">
-                                                <span class="font-medium text-sm">{{ Str::after($school['name'], 'SchoolSuite ') }}</span>
+                                                <span class="font-medium text-sm">{{ Str::after($school['name'], 'TalentZone Academy ') }}</span>
                                             </div>
                                         </label>
                                     @endforeach
@@ -161,7 +161,7 @@
                                         <div class="w-3 h-3 {{ $dotColor }} rounded-full mt-1.5 flex-shrink-0"></div>
                                         <div class="flex-1">
                                             <div class="font-semibold text-slate-900 group-hover:text-primary-600 transition-colors">
-                                                {{ Str::after($school['name'], 'SchoolSuite ') }}
+                                                {{ Str::after($school['name'], 'TalentZone Academy ') }}
                                             </div>
                                             <div class="text-slate-500 text-sm mt-1">{{ $school['address'] }}</div>
                                             <div class="flex items-center gap-4 mt-2 text-sm">
@@ -227,7 +227,7 @@
                     <div class="bg-white p-6 rounded-2xl border-2 {{ $borderColor }} transition-colors">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-3 h-3 rounded-full {{ str_replace('text', 'bg', $textColor) }}"></div>
-                            <h3 class="font-semibold text-slate-900">{{ Str::after($school['name'], 'SchoolSuite ') }}</h3>
+                            <h3 class="font-semibold text-slate-900">{{ Str::after($school['name'], 'TalentZone Academy ') }}</h3>
                         </div>
                         <p class="text-slate-600 text-sm mb-4">{{ $school['address'] }}</p>
                         <a href="#" class="inline-flex items-center gap-2 {{ $textColor }} font-medium text-sm hover:underline">

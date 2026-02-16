@@ -34,7 +34,7 @@
                 <img src="{{ asset('images/logo.png') }}" alt="{{ config('app.name') }}" 
                     class="w-20 h-20 rounded-xl bg-white/10 p-1 object-contain">
                     <div>
-                        <span class="font-display font-bold text-2xl block">SchoolSuite</span>
+                        <span class="font-display font-bold text-2xl block">TalentZone Academy</span>
                         <span class="text-slate-400 text-sm">Education Group</span>
                     </div>
                 </a>
@@ -98,7 +98,7 @@
                         <a href="{{ route('schools.show', $school['slug']) }}" 
                            class="group block p-4 rounded-xl bg-gradient-to-br {{ $colorBorder }} to-transparent border-l-2 hover:bg-slate-800/50 transition-all">
                             <h5 class="font-semibold text-white group-hover:text-primary-400 transition-colors mb-2">
-                                {{ Str::after($school['name'], 'SchoolSuite ') }}
+                                {{ Str::after($school['name'], 'TalentZone Academy ') }}
                             </h5>
                             <p class="text-slate-500 text-xs mb-2 line-clamp-2">{{ $school['address'] }}</p>
                             <p class="text-slate-400 text-sm">{{ $school['phone'] }}</p>

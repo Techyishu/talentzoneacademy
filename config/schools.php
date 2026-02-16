@@ -2,21 +2,21 @@
 
 return [
     'organization' => [
-        'name' => 'SchoolSuite Education Group',
+        'name' => 'TalentZone Academy',
         'tagline' => 'Nurturing Excellence, Inspiring Futures',
         'phone' => '+91 98765 43210',
-        'email' => 'info@schoolsuite.edu',
+        'email' => 'info@talentzoneacademy.edu',
         'address' => '123 Education Boulevard, Mumbai, Maharashtra 400001',
     ],
 
     'schools' => [
         [
-            'name' => 'SchoolSuite Central Campus',
+            'name' => 'TalentZone Academy Central Campus',
             'slug' => 'central-campus',
             'tagline' => 'Where Excellence Meets Innovation',
             'address' => '45 Central Avenue, Andheri West, Mumbai 400058',
             'phone' => '+91 22 2345 6789',
-            'email' => 'central@schoolsuite.edu',
+            'email' => 'central@talentzoneacademy.edu',
             'hero_image' => '/images/schools/central-hero.jpg',
             'color' => 'primary',
             'established' => '1995',
@@ -35,12 +35,12 @@ return [
             ],
         ],
         [
-            'name' => 'SchoolSuite North Campus',
+            'name' => 'TalentZone Academy North Campus',
             'slug' => 'north-campus',
             'tagline' => 'Building Tomorrow\'s Leaders Today',
             'address' => '78 Lake Road, Powai, Mumbai 400076',
             'phone' => '+91 22 3456 7890',
-            'email' => 'north@schoolsuite.edu',
+            'email' => 'north@talentzoneacademy.edu',
             'hero_image' => '/images/schools/north-hero.jpg',
             'color' => 'accent',
             'established' => '2005',
@@ -59,12 +59,12 @@ return [
             ],
         ],
         [
-            'name' => 'SchoolSuite East Campus',
+            'name' => 'TalentZone Academy East Campus',
             'slug' => 'east-campus',
             'tagline' => 'Empowering Minds, Enriching Lives',
             'address' => '156 Garden Lane, Thane West, Mumbai 400607',
             'phone' => '+91 22 4567 8901',
-            'email' => 'east@schoolsuite.edu',
+            'email' => 'east@talentzoneacademy.edu',
             'hero_image' => '/images/schools/east-hero.jpg',
             'color' => 'warm',
             'established' => '2012',
@@ -128,7 +128,7 @@ return [
         [
             'name' => 'Meera Patel',
             'role' => 'Parent, Central Campus',
-            'content' => 'SchoolSuite has transformed my daughter\'s learning experience. The teachers are truly dedicated and the facilities are outstanding.',
+            'content' => 'TalentZone Academy has transformed my daughter\'s learning experience. The teachers are truly dedicated and the facilities are outstanding.',
             'image' => '/images/testimonials/parent-1.jpg',
         ],
         [
@@ -149,7 +149,7 @@ return [
         [
             'name' => 'Mr. Vikram Malhotra',
             'role' => 'Chairman',
-            'bio' => 'With over 40 years in education, Mr. Malhotra founded SchoolSuite with a vision to create world-class educational institutions accessible to all.',
+            'bio' => 'With over 40 years in education, Mr. Malhotra founded TalentZone Academy with a vision to create world-class educational institutions accessible to all.',
             'image' => '/images/staff/chairman.jpg',
         ],
         [

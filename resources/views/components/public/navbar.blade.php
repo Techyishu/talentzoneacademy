@@ -61,7 +61,7 @@
                                     <div class="flex-1 min-w-0">
                                         <span
                                             class="block text-sm font-semibold text-slate-900 group-hover:text-orange-coral transition-colors">
-                                            {{ Str::after($school['name'], 'SchoolSuite ') }}
+                                            {{ Str::after($school['name'], 'TalentZone Academy ') }}
                                         </span>
                                         <span class="block text-xs text-slate-500 truncate">{{ $school['tagline'] }}</span>
                                     </div>
@@ -181,7 +181,7 @@
                     <a href="{{ route('schools.show', $school['slug']) }}"
                         class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 hover:bg-slate-50 transition-colors">
                         <div class="w-2 h-2 rounded-full {{ $colorDot }}"></div>
-                        {{ Str::after($school['name'], 'SchoolSuite ') }}
+                        {{ Str::after($school['name'], 'TalentZone Academy ') }}
                     </a>
                 @endforeach
 

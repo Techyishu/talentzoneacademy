@@ -99,7 +99,7 @@
                                 @endphp
                                 <th class="px-8 py-6 text-center" style="background-color: #FFF8F0;">
                                     <span class="inline-block px-4 py-2 rounded-xl text-sm font-bold" style="background-color: {{ $bgColor }}; color: {{ $color }};">
-                                        {{ Str::after($school['name'], 'SchoolSuite ') }}
+                                        {{ Str::after($school['name'], 'TalentZone Academy ') }}
                                     </span>
                                 </th>
                             @endforeach

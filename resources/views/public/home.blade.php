@@ -752,7 +752,7 @@
 
         <div class="container-custom relative">
             <div class="text-center mb-16">
-                <p class="text-orange-coral text-sm font-bold tracking-wide uppercase mb-4">Life at SchoolSuite</p>
+                <p class="text-orange-coral text-sm font-bold tracking-wide uppercase mb-4">Life at TalentZone Academy</p>
                 <h2 class="font-display font-bold text-4xl md:text-5xl mb-6" style="color: #2B2826;">
                     Campus <span class="text-gradient-orange">Life</span>
                 </h2>
@@ -822,7 +822,7 @@
                     What <span class="text-gradient-orange">Parents</span> Say
                 </h2>
                 <p class="text-slate-600 text-lg max-w-2xl mx-auto">
-                    Hear from families who have experienced the SchoolSuite difference.
+                    Hear from families who have experienced the TalentZone Academy difference.
                 </p>
             </div>
 

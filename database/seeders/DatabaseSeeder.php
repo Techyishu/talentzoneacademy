@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         // Create Super Admin
         User::create([
             'name' => 'Super Admin',
-            'email' => 'admin@schoolsuite.com',
+            'email' => 'admin@talentzoneacademy.com',
             'password' => Hash::make('password'),
             'role' => 'super_admin',
             'school_id' => null,
@@ -135,7 +135,7 @@ class DatabaseSeeder extends Seeder
         }
 
         $this->command->info('Database seeded successfully!');
-        $this->command->info('Super Admin: admin@schoolsuite.com / password');
+        $this->command->info('Super Admin: admin@talentzoneacademy.com / password');
         $this->command->info('School Admin 1: admin@sch001.com / password');
         $this->command->info('School Admin 2: admin@sch002.com / password');
         $this->command->info('School Admin 3: admin@sch003.com / password');
