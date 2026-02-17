@@ -22,14 +22,12 @@ class EnsureSchoolAdmin
 
         $user = auth()->user();
 
-        // Super admins can access all areas but must have an active school
+        // Super admins can access all areas
         if ($user->isSuperAdmin()) {
             if (!session('active_school_id')) {
-                $firstSchool = \App\Models\School::where('status', 'active')->first();
+                $firstSchool = \App\Models\School::first();
                 if ($firstSchool) {
                     session(['active_school_id' => $firstSchool->id]);
-                } else {
-                    abort(403, 'No active school available.');
                 }
             }
             return $next($request);

@@ -21,7 +21,7 @@ class DashboardController extends Controller
             // Super admin sees aggregate stats across all schools
             $totalStudents = Student::count();
             $totalStaff = Staff::count();
-            $totalSchools = School::where('status', 'active')->count();
+            $totalSchools = School::count();
             $recentReceipts = FeeReceipt::with(['student', 'school'])
                 ->latest()
                 ->limit(5)

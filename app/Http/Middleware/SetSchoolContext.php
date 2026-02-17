@@ -25,7 +25,7 @@ class SetSchoolContext
 
             // For super admins, if no active school is set, set the first school
             if ($user->isSuperAdmin() && !session('active_school_id')) {
-                $firstSchool = \App\Models\School::where('status', 'active')->first();
+                $firstSchool = \App\Models\School::first();
                 if ($firstSchool) {
                     session(['active_school_id' => $firstSchool->id]);
                 }
