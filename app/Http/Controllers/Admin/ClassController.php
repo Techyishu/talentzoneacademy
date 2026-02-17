@@ -35,17 +35,21 @@ class ClassController extends Controller
      */
     public function store(Request $request)
     {
+        $schoolId = session('active_school_id');
+
+        abort_unless($schoolId, 403, 'No active school selected.');
+
         $validated = $request->validate([
             'name' => [
                 'required',
                 'string',
                 'max:255',
-                Rule::unique('classes', 'name')->where('school_id', session('active_school_id')),
+                Rule::unique('classes', 'name')->where('school_id', $schoolId),
             ],
             'display_order' => 'nullable|integer|min:0',
         ]);
 
-        SchoolClass::create($validated);
+        SchoolClass::create(array_merge($validated, ['school_id' => $schoolId]));
 
         return redirect()
             ->route('admin.classes.index')
@@ -75,13 +79,17 @@ class ClassController extends Controller
      */
     public function update(Request $request, SchoolClass $class)
     {
+        $schoolId = session('active_school_id');
+
+        abort_unless($schoolId, 403, 'No active school selected.');
+
         $validated = $request->validate([
             'name' => [
                 'required',
                 'string',
                 'max:255',
                 Rule::unique('classes', 'name')
-                    ->where('school_id', session('active_school_id'))
+                    ->where('school_id', $schoolId)
                     ->ignore($class->id),
             ],
             'display_order' => 'nullable|integer|min:0',

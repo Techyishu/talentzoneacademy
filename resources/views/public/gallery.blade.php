@@ -25,7 +25,7 @@
             </div>
             <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl mb-4">Gallery</h1>
             <p class="text-white/90 text-lg md:text-xl max-w-2xl mx-auto">
-                Explore moments of learning, creativity, and achievement across our three campuses.
+                Explore moments of learning, creativity, and achievement across our two campuses.
             </p>
         </div>
     </section>

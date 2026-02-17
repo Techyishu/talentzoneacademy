@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ $title ?? 'Staff Portal' }} - {{ config('app.name', 'TalentZone Academy') }}</title>
+    <title>{{ $title ?? 'Staff Portal' }} - {{ config('app.name', 'Talent Zone Academy') }}</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>

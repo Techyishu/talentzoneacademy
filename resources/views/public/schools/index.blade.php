@@ -27,11 +27,11 @@
 
         <div class="container-custom relative z-10 text-center text-white">
             <div class="inline-block px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full mb-6">
-                <span class="text-sm font-bold">3 Campuses • 5,500+ Students</span>
+                <span class="text-sm font-bold">2 Campuses • 4,300+ Students</span>
             </div>
             <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl mb-4">Our Schools</h1>
             <p class="text-white/90 text-lg md:text-xl max-w-2xl mx-auto">
-                Three uniquely positioned campuses, united by a shared commitment to educational excellence.
+                Two uniquely positioned campuses, united by a shared commitment to educational excellence.
             </p>
         </div>
     </section>
@@ -52,11 +52,11 @@
                     ready to <span class="text-gradient-orange">fly high!</span>
                 </h2>
                 <p class="text-slate-600 text-lg max-w-2xl mx-auto">
-                    Discover our three modern campuses designed for excellence and growth.
+                    Discover our two modern campuses designed for excellence and growth.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 @foreach($schools as $index => $school)
                     <x-public.school-card :school="$school" :index="$index" />
                 @endforeach
@@ -99,7 +99,7 @@
                                 @endphp
                                 <th class="px-8 py-6 text-center" style="background-color: #FFF8F0;">
                                     <span class="inline-block px-4 py-2 rounded-xl text-sm font-bold" style="background-color: {{ $bgColor }}; color: {{ $color }};">
-                                        {{ Str::after($school['name'], 'TalentZone Academy ') }}
+                                        {{ Str::after($school['name'], 'Talent Zone Academy ') }}
                                     </span>
                                 </th>
                             @endforeach

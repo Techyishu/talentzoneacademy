@@ -167,7 +167,7 @@
                                 </p>
                                 <div>
                                     <div class="font-bold text-slate-900 text-lg">{{ $school['principal']['name'] }}</div>
-                                    <div class="text-slate-500">Principal, {{ Str::after($school['name'], 'TalentZone Academy ') }}</div>
+                                    <div class="text-slate-500">Principal, {{ Str::after($school['name'], 'Talent Zone Academy ') }}</div>
                                 </div>
                             </div>
                         </div>
@@ -372,7 +372,7 @@
 
     {{-- CTA --}}
     <x-public.cta-band 
-        title="Ready to Join {{ Str::after($school['name'], 'TalentZone Academy ') }}?"
+        title="Ready to Join {{ Str::after($school['name'], 'Talent Zone Academy ') }}?"
         subtitle="Begin your application today or schedule a campus visit."
         primaryText="Apply Now"
         primaryUrl="{{ route('contact') }}"

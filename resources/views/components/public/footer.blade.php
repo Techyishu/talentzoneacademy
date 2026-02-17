@@ -34,12 +34,12 @@
                 <img src="{{ asset('images/logo.png') }}" alt="{{ config('app.name') }}" 
                     class="w-20 h-20 rounded-xl bg-white/10 p-1 object-contain">
                     <div>
-                        <span class="font-display font-bold text-2xl block">TalentZone Academy</span>
+                        <span class="font-display font-bold text-2xl block">Talent Zone Academy</span>
                         <span class="text-slate-400 text-sm">Education Group</span>
                     </div>
                 </a>
                 <p class="text-slate-400 leading-relaxed mb-6 max-w-sm">
-                    {{ config('schools.organization.tagline') }}. Providing world-class education across our three campuses.
+                    {{ config('schools.organization.tagline') }}. Providing world-class education across our two campuses.
                 </p>
                 
                 {{-- Social Links --}}
@@ -85,7 +85,7 @@
             {{-- Our Campuses --}}
             <div class="lg:col-span-6">
                 <h4 class="font-display font-semibold text-lg mb-6">Our Campuses</h4>
-                <div class="grid sm:grid-cols-3 gap-6">
+                <div class="grid sm:grid-cols-2 gap-6">
                     @foreach(config('schools.schools') as $school)
                         @php
                             $colorBorder = match($school['color']) {
@@ -98,7 +98,7 @@
                         <a href="{{ route('schools.show', $school['slug']) }}" 
                            class="group block p-4 rounded-xl bg-gradient-to-br {{ $colorBorder }} to-transparent border-l-2 hover:bg-slate-800/50 transition-all">
                             <h5 class="font-semibold text-white group-hover:text-primary-400 transition-colors mb-2">
-                                {{ Str::after($school['name'], 'TalentZone Academy ') }}
+                                {{ Str::after($school['name'], 'Talent Zone Academy ') }}
                             </h5>
                             <p class="text-slate-500 text-xs mb-2 line-clamp-2">{{ $school['address'] }}</p>
                             <p class="text-slate-400 text-sm">{{ $school['phone'] }}</p>

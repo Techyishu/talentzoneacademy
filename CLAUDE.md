@@ -123,13 +123,12 @@ php artisan optimize:clear
 After running `php artisan migrate:fresh --seed`:
 
 **Super Admin** (can manage all schools):
-- Email: `admin@schoolsuite.com`
+- Email: `admin@talentzoneacademy.com`
 - Password: `password`
 
 **School Admins** (one per school):
-- Green Valley: `admin@sch001.com` / `password`
-- Sunshine Academy: `admin@sch002.com` / `password`
-- Royal Public: `admin@sch003.com` / `password`
+- Talent Zone Academy Karnal: `admin@tak.com` / `password`
+- Talent Zone Academy Kurukshetra: `admin@takk.com` / `password`
 
 ## Key Packages & Purpose
 

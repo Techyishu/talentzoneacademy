@@ -29,34 +29,25 @@ class DatabaseSeeder extends Seeder
             'school_id' => null,
         ]);
 
-        // Create 3 Schools
+        // Create 2 Schools
         $schools = [
             [
-                'name' => 'Green Valley International School',
-                'code' => 'SCH001',
-                'address' => '123 Education Street, City',
-                'phone' => '+1-234-567-8901',
-                'email' => 'info@greenvalley.edu',
-                'receipt_prefix' => 'GVIS-',
-                'primary_color' => '#10B981',
+                'name' => 'Talent Zone Academy Karnal',
+                'code' => 'TAK',
+                'address' => 'Karnal, Haryana 132001',
+                'phone' => '+91 184 225 6789',
+                'email' => 'karnal@talentzoneacademy.edu',
+                'receipt_prefix' => 'TAK-',
+                'primary_color' => '#E31E24',
             ],
             [
-                'name' => 'Sunshine Academy',
-                'code' => 'SCH002',
-                'address' => '456 Learning Ave, Town',
-                'phone' => '+1-234-567-8902',
-                'email' => 'contact@sunshine.edu',
-                'receipt_prefix' => 'SA-',
-                'primary_color' => '#F59E0B',
-            ],
-            [
-                'name' => 'Royal Public School',
-                'code' => 'SCH003',
-                'address' => '789 Knowledge Blvd, Village',
-                'phone' => '+1-234-567-8903',
-                'email' => 'admin@royalpublic.edu',
-                'receipt_prefix' => 'RPS-',
-                'primary_color' => '#8B5CF6',
+                'name' => 'Talent Zone Academy Kurukshetra',
+                'code' => 'TAKK',
+                'address' => 'Kurukshetra, Haryana 136118',
+                'phone' => '+91 174 423 7890',
+                'email' => 'kurukshetra@talentzoneacademy.edu',
+                'receipt_prefix' => 'TAKK-',
+                'primary_color' => '#003B71',
             ],
         ];
 
@@ -136,8 +127,7 @@ class DatabaseSeeder extends Seeder
 
         $this->command->info('Database seeded successfully!');
         $this->command->info('Super Admin: admin@talentzoneacademy.com / password');
-        $this->command->info('School Admin 1: admin@sch001.com / password');
-        $this->command->info('School Admin 2: admin@sch002.com / password');
-        $this->command->info('School Admin 3: admin@sch003.com / password');
+        $this->command->info('School Admin 1: admin@tak.com / password');
+        $this->command->info('School Admin 2: admin@takk.com / password');
     }
 }

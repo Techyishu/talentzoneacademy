@@ -73,7 +73,7 @@
                             
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-2">Preferred Campus *</label>
-                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                     @foreach($schools as $school)
                                         @php
                                             $colorClass = match($school['color']) {
@@ -86,7 +86,7 @@
                                         <label class="relative cursor-pointer">
                                             <input type="radio" name="school" value="{{ $school['slug'] }}" class="peer sr-only">
                                             <div class="p-4 text-center rounded-xl border-2 border-slate-200 {{ $colorClass }} transition-all hover:border-slate-300">
-                                                <span class="font-medium text-sm">{{ Str::after($school['name'], 'TalentZone Academy ') }}</span>
+                                                <span class="font-medium text-sm">{{ Str::after($school['name'], 'Talent Zone Academy ') }}</span>
                                             </div>
                                         </label>
                                     @endforeach
@@ -161,7 +161,7 @@
                                         <div class="w-3 h-3 {{ $dotColor }} rounded-full mt-1.5 flex-shrink-0"></div>
                                         <div class="flex-1">
                                             <div class="font-semibold text-slate-900 group-hover:text-primary-600 transition-colors">
-                                                {{ Str::after($school['name'], 'TalentZone Academy ') }}
+                                                {{ Str::after($school['name'], 'Talent Zone Academy ') }}
                                             </div>
                                             <div class="text-slate-500 text-sm mt-1">{{ $school['address'] }}</div>
                                             <div class="flex items-center gap-4 mt-2 text-sm">
@@ -208,7 +208,7 @@
                 <h2 class="font-display font-bold text-3xl text-slate-900">Visit Our Campuses</h2>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
                 @foreach($schools as $school)
                     @php
                         $borderColor = match($school['color']) {
@@ -227,7 +227,7 @@
                     <div class="bg-white p-6 rounded-2xl border-2 {{ $borderColor }} transition-colors">
                         <div class="flex items-center gap-3 mb-4">
                             <div class="w-3 h-3 rounded-full {{ str_replace('text', 'bg', $textColor) }}"></div>
-                            <h3 class="font-semibold text-slate-900">{{ Str::after($school['name'], 'TalentZone Academy ') }}</h3>
+                            <h3 class="font-semibold text-slate-900">{{ Str::after($school['name'], 'Talent Zone Academy ') }}</h3>
                         </div>
                         <p class="text-slate-600 text-sm mb-4">{{ $school['address'] }}</p>
                         <a href="#" class="inline-flex items-center gap-2 {{ $textColor }} font-medium text-sm hover:underline">
@@ -246,7 +246,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
                     </svg>
                     <p class="text-lg font-medium">Interactive Map Coming Soon</p>
-                    <p class="text-sm">All three campus locations</p>
+                    <p class="text-sm">Both campus locations</p>
                 </div>
             </div>
         </div>
