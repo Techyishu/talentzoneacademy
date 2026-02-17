@@ -44,6 +44,6 @@ class EnsureSchoolAdmin
             return $next($request);
         }
 
-        abort(403, 'Unauthorized access.');
+        return redirect()->route(auth()->user()->getDashboardRoute());
     }
 }

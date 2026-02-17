@@ -38,6 +38,10 @@ Route::get('/gallery', function () {
     return view('public.gallery');
 })->name('gallery');
 
+Route::get('/approach', function () {
+    return view('public.approach');
+})->name('approach');
+
 Route::get('/staff', function () {
     $staffBySchool = \App\Models\Staff::visibleOnWebsite()
         ->with('school')
@@ -63,7 +67,7 @@ Route::get('/contact', function () {
 */
 
 Route::get('/dashboard', function () {
-    return redirect()->route('admin.dashboard');
+    return redirect()->route(auth()->user()->getDashboardRoute());
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

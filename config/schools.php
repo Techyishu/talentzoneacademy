@@ -33,6 +33,11 @@ return [
                 'message' => 'At Talent Zone Academy Karnal, we believe every child has the potential to achieve greatness. Our holistic approach to education combines academic excellence with character development.',
                 'image' => '/images/staff/principal-karnal.jpg',
             ],
+            'md' => [
+                'name' => 'Er. Arvind Dahiya',
+                'message' => 'Our vision is to empower students with knowledge and skills that go beyond textbooks. We are committed to fostering a learning environment where innovation meets tradition, preparing our students to be the leaders of tomorrow.',
+                'image' => '/images/staff/md.jpg',
+            ],
         ],
         [
             'name' => 'Talent Zone Academy Kurukshetra',
@@ -56,6 +61,11 @@ return [
                 'name' => 'Mr. Rajesh Kumar',
                 'message' => 'Our Kurukshetra school is a vibrant community where students discover their passions and develop skills for the future. We nurture curiosity and creativity in every learner.',
                 'image' => '/images/staff/principal-kurukshetra.jpg',
+            ],
+            'md' => [
+                'name' => 'Er. Arvind Dahiya',
+                'message' => 'Our vision is to empower students with knowledge and skills that go beyond textbooks. We are committed to fostering a learning environment where innovation meets tradition, preparing our students to be the leaders of tomorrow.',
+                'image' => '/images/staff/md.jpg',
             ],
         ],
     ],
