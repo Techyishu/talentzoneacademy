@@ -43,11 +43,9 @@
             x-transition:leave-start="opacity-100 scale-100"
             x-transition:leave-end="opacity-0 scale-95"
             class="absolute inset-0">
-            {{-- Blurred background fill --}}
-            <img src="{{ asset('images/hero-slide-1.jpg') }}" alt="" class="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl">
-            {{-- Actual image zoomed out --}}
-            <img src="{{ asset('images/hero-slide-1.jpg') }}" alt="Talent Zone Academy Campus" class="absolute inset-0 w-full h-full object-contain">
-            <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 40%, rgba(0,59,113,0.4) 100%);"></div>
+            <div class="absolute inset-0 bg-slate-900"></div>
+            <img src="{{ asset('images/hero-slide-1.jpg') }}" alt="Talent Zone Academy Campus" class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
+            <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);"></div>
             <div class="absolute inset-0 flex items-center pt-20 lg:pt-0">
                 <div class="container-custom relative z-10">
                     <div class="max-w-2xl text-center lg:text-left">
@@ -85,9 +83,9 @@
             x-transition:leave-start="opacity-100 scale-100"
             x-transition:leave-end="opacity-0 scale-95"
             class="absolute inset-0">
-            <img src="{{ asset('images/hero-slide-2.jpg') }}" alt="" class="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl">
-            <img src="{{ asset('images/hero-slide-2.jpg') }}" alt="Award Winning Students" class="absolute inset-0 w-full h-full object-contain">
-            <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 40%, rgba(227,30,36,0.3) 100%);"></div>
+            <div class="absolute inset-0 bg-slate-900"></div>
+            <img src="{{ asset('images/hero-slide-2.jpg') }}" alt="Award Winning Students" class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
+            <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);"></div>
             <div class="absolute inset-0 flex items-center pt-20 lg:pt-0">
                 <div class="container-custom relative z-10">
                     <div class="max-w-2xl text-center lg:text-left">
@@ -125,9 +123,9 @@
             x-transition:leave-start="opacity-100 scale-100"
             x-transition:leave-end="opacity-0 scale-95"
             class="absolute inset-0">
-            <img src="{{ asset('images/hero-slide-3.jpg') }}" alt="" class="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl">
-            <img src="{{ asset('images/hero-slide-3.jpg') }}" alt="Students Celebrating Success" class="absolute inset-0 w-full h-full object-contain">
-            <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 40%, rgba(0,59,113,0.3) 100%);"></div>
+            <div class="absolute inset-0 bg-slate-900"></div>
+            <img src="{{ asset('images/hero-slide-3.jpg') }}" alt="Students Celebrating Success" class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
+            <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);"></div>
             <div class="absolute inset-0 flex items-center pt-20 lg:pt-0">
                 <div class="container-custom relative z-10">
                     <div class="max-w-2xl text-center lg:text-left">
@@ -165,9 +163,9 @@
             x-transition:leave-start="opacity-100 scale-100"
             x-transition:leave-end="opacity-0 scale-95"
             class="absolute inset-0">
-            <img src="{{ asset('images/hero-slide-4.jpg') }}" alt="" class="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl">
-            <img src="{{ asset('images/hero-slide-4.jpg') }}" alt="Talent Zone Academy Students" class="absolute inset-0 w-full h-full object-contain">
-            <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 40%, rgba(227,30,36,0.3) 100%);"></div>
+            <div class="absolute inset-0 bg-slate-900"></div>
+            <img src="{{ asset('images/hero-slide-4.jpg') }}" alt="Talent Zone Academy Students" class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
+            <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);"></div>
             <div class="absolute inset-0 flex items-center pt-20 lg:pt-0">
                 <div class="container-custom relative z-10">
                     <div class="max-w-2xl text-center lg:text-left">
