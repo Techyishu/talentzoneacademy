@@ -49,7 +49,7 @@
     <section class="section-padding bg-slate-50">
         <div class="container-custom">
             <x-public.section-heading title="Our Educators"
-                subtitle="Meet the dedicated team working across our campuses." />
+                subtitle="Meet the dedicated team working across our schools." />
 
             @if($staffBySchool->count() > 0)
                 @foreach($staffBySchool as $schoolId => $staffMembers)

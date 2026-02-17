@@ -39,7 +39,7 @@
                     </div>
                 </a>
                 <p class="text-slate-400 leading-relaxed mb-6 max-w-sm">
-                    {{ config('schools.organization.tagline') }}. Providing world-class education across our two campuses.
+                    {{ config('schools.organization.tagline') }}. Providing world-class education across our two schools.
                 </p>
                 
                 {{-- Social Links --}}
@@ -82,9 +82,9 @@
                 </ul>
             </div>
 
-            {{-- Our Campuses --}}
+            {{-- Our Schools --}}
             <div class="lg:col-span-6">
-                <h4 class="font-display font-semibold text-lg mb-6">Our Campuses</h4>
+                <h4 class="font-display font-semibold text-lg mb-6">Our Schools</h4>
                 <div class="grid sm:grid-cols-2 gap-6">
                     @foreach(config('schools.schools') as $school)
                         @php

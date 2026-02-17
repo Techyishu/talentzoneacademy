@@ -37,12 +37,7 @@
 
         {{-- Content --}}
         <div class="relative z-10 flex-1 flex flex-col">
-            {{-- Badge --}}
-            <div class="mb-6">
-                <span class="inline-block px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-sm font-bold" style="color: {{ $colors['icon'] == '#ADD8E6' || $colors['icon'] == '#87CEEB' ? '#003B71' : '#E31E24' }};">
-                    Est. {{ $school['established'] }}
-                </span>
-            </div>
+
 
             {{-- Icon Placeholder (Student Silhouette) --}}
             <div class="mb-6">
@@ -61,22 +56,7 @@
                 <p class="text-white/90 text-base mb-6">{{ $school['tagline'] }}</p>
             </div>
 
-            {{-- Stats --}}
-            <div class="flex items-center gap-6 mb-6 text-white/90">
-                <div class="flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197"/>
-                    </svg>
-                    <span class="text-sm font-semibold">{{ $school['students'] }}</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
-                    </svg>
-                    <span class="text-sm font-semibold">{{ $school['teachers'] }} Teachers</span>
-                </div>
-            </div>
+
 
             {{-- CTA --}}
             <div class="flex items-center text-white font-semibold text-base group-hover:gap-3 transition-all duration-300 gap-2">

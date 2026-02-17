@@ -72,7 +72,7 @@
                             </div>
                             
                             <div>
-                                <label class="block text-sm font-semibold text-slate-700 mb-2">Preferred Campus *</label>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Preferred School *</label>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                     @foreach($schools as $school)
                                         @php
@@ -142,9 +142,9 @@
                         </div>
                     </div>
 
-                    {{-- Campus Locations --}}
+                    {{-- School Locations --}}
                     <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-                        <h3 class="font-display font-bold text-xl text-slate-900 mb-6">Our Campuses</h3>
+                        <h3 class="font-display font-bold text-xl text-slate-900 mb-6">Our Schools</h3>
                         <div class="space-y-4">
                             @foreach($schools as $school)
                                 @php
@@ -205,7 +205,7 @@
         <div class="container-custom">
             <div class="text-center mb-12">
                 <span class="badge badge-primary mb-4">Find Us</span>
-                <h2 class="font-display font-bold text-3xl text-slate-900">Visit Our Campuses</h2>
+                <h2 class="font-display font-bold text-3xl text-slate-900">Visit Our Schools</h2>
             </div>
             
             <div class="grid md:grid-cols-2 gap-6 mb-8">
@@ -246,7 +246,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
                     </svg>
                     <p class="text-lg font-medium">Interactive Map Coming Soon</p>
-                    <p class="text-sm">Both campus locations</p>
+                    <p class="text-sm">Both school locations</p>
                 </div>
             </div>
         </div>
@@ -264,7 +264,7 @@
             <div class="space-y-4" x-data="{ openFaq: null }">
                 @foreach([
                     ['q' => 'What is the admission process?', 'a' => 'Our admission process includes registration, entrance assessment, parent interview, and document verification. The process typically takes 2-3 weeks from application to confirmation.'],
-                    ['q' => 'What curriculum do you follow?', 'a' => 'We follow the CBSE curriculum across all our campuses, supplemented with innovative teaching methodologies and holistic development programs.'],
+                    ['q' => 'What curriculum do you follow?', 'a' => 'We follow the CBSE curriculum across all our schools, supplemented with innovative teaching methodologies and holistic development programs.'],
                     ['q' => 'Is transportation available?', 'a' => 'Yes, we provide GPS-enabled bus transport across the city with trained drivers and attendants. Routes cover most major residential areas.'],
                     ['q' => 'What extra-curricular activities are offered?', 'a' => 'We offer a wide range including sports, music, dance, drama, art, debate, robotics, yoga, and more. Students can choose activities based on their interests.'],
                 ] as $index => $faq)

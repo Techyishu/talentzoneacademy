@@ -49,7 +49,7 @@
             </a>
             
             <div class="max-w-3xl">
-                <span class="badge badge-glass mb-6">Est. {{ $school['established'] }}</span>
+
                 <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-4">
                     {{ $school['name'] }}
                 </h1>
@@ -73,31 +73,7 @@
         </div>
     </section>
 
-    {{-- Quick Stats --}}
-    <section class="py-8 bg-white border-b border-slate-100 sticky top-20 z-30 backdrop-blur-xl bg-white/95">
-        <div class="container-custom">
-            <div class="flex flex-wrap justify-center gap-12 md:gap-20">
-                <div class="text-center">
-                    <div class="font-display font-bold text-3xl {{ $colors['text'] }}">
-                        {{ $school['established'] }}
-                    </div>
-                    <div class="text-slate-500 text-sm">Established</div>
-                </div>
-                <div class="text-center">
-                    <div class="font-display font-bold text-3xl {{ $colors['text'] }}">
-                        {{ $school['students'] }}
-                    </div>
-                    <div class="text-slate-500 text-sm">Students</div>
-                </div>
-                <div class="text-center">
-                    <div class="font-display font-bold text-3xl {{ $colors['text'] }}">
-                        {{ $school['teachers'] }}
-                    </div>
-                    <div class="text-slate-500 text-sm">Teachers</div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     {{-- Tabs Content --}}
     <section class="section-padding" x-data="{ activeTab: 'about' }">
@@ -119,10 +95,10 @@
                 <div x-show="activeTab === 'about'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" class="space-y-16">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <span class="badge badge-primary mb-4">About Our Campus</span>
-                            <h2 class="font-display font-bold text-3xl md:text-4xl text-slate-900 mb-6">A Campus Built for Excellence</h2>
+                            <span class="badge badge-primary mb-4">About Our School</span>
+                            <h2 class="font-display font-bold text-3xl md:text-4xl text-slate-900 mb-6">A School Built for Excellence</h2>
                             <p class="text-slate-600 leading-relaxed mb-6 text-lg">
-                                {{ $school['name'] }} stands as a beacon of educational excellence. Our campus combines state-of-the-art infrastructure with time-tested teaching methodologies to create an environment where every student can thrive.
+                                {{ $school['name'] }} stands as a beacon of educational excellence. Our school combines state-of-the-art infrastructure with time-tested teaching methodologies to create an environment where every student can thrive.
                             </p>
                             <p class="text-slate-600 leading-relaxed">
                                 With a focus on holistic development, we nurture not just academic excellence but also character, creativity, and critical thinking skills that prepare students for success in the 21st century.
@@ -288,7 +264,7 @@
                 <div x-show="activeTab === 'contact'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0">
                     <div class="text-center mb-12">
                         <span class="badge badge-primary mb-4">Get In Touch</span>
-                        <h2 class="font-display font-bold text-3xl md:text-4xl text-slate-900">Contact This Campus</h2>
+                        <h2 class="font-display font-bold text-3xl md:text-4xl text-slate-900">Contact This School</h2>
                     </div>
                     
                     <div class="grid md:grid-cols-2 gap-12">
@@ -325,11 +301,11 @@
         </div>
     </section>
 
-    {{-- Other Campuses --}}
+    {{-- Other Schools --}}
     <section class="py-16 bg-slate-50">
         <div class="container-custom">
             <div class="flex items-center justify-between mb-8">
-                <h2 class="font-display font-bold text-2xl text-slate-900">Explore Other Campuses</h2>
+                <h2 class="font-display font-bold text-2xl text-slate-900">Explore Other Schools</h2>
                 <a href="{{ route('schools') }}" class="text-primary-600 font-semibold text-sm hover:text-primary-700 flex items-center gap-1">
                     View All
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -373,7 +349,7 @@
     {{-- CTA --}}
     <x-public.cta-band 
         title="Ready to Join {{ Str::after($school['name'], 'Talent Zone Academy ') }}?"
-        subtitle="Begin your application today or schedule a campus visit."
+        subtitle="Begin your application today or schedule a school visit."
         primaryText="Apply Now"
         primaryUrl="{{ route('contact') }}"
         secondaryText="Book a Tour"

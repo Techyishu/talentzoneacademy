@@ -37,35 +37,44 @@
 
         {{-- Slide 1: School Building --}}
         <div x-show="currentSlide === 0" x-transition:enter="transition ease-out duration-1000"
-            x-transition:enter-start="opacity-0 scale-105"
-            x-transition:enter-end="opacity-100 scale-100"
-            x-transition:leave="transition ease-in duration-500"
-            x-transition:leave-start="opacity-100 scale-100"
-            x-transition:leave-end="opacity-0 scale-95"
-            class="absolute inset-0">
+            x-transition:enter-start="opacity-0 scale-105" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-500" x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95" class="absolute inset-0">
             <div class="absolute inset-0 bg-slate-900"></div>
-            <img src="{{ asset('images/hero-slide-1.jpg') }}" alt="Talent Zone Academy Campus" class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
-            <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);"></div>
+            <img src="{{ asset('images/hero-slide-1.jpg') }}" alt="Talent Zone Academy School"
+                class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
+            <div class="absolute inset-0"
+                style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);">
+            </div>
             <div class="absolute inset-0 flex items-center pt-20 lg:pt-0">
                 <div class="container-custom relative z-10">
                     <div class="max-w-2xl text-center lg:text-left">
-                        <div class="inline-flex items-center gap-2 px-3 py-1.5 lg:px-4 lg:py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-4 lg:mb-6 mx-auto lg:mx-0">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1.5 lg:px-4 lg:py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-4 lg:mb-6 mx-auto lg:mx-0">
                             <span class="animate-pulse text-sm lg:text-base">🔥</span>
-                            <span class="text-xs lg:text-sm font-bold tracking-wide uppercase text-white">Success to Everyone</span>
+                            <span class="text-xs lg:text-sm font-bold tracking-wide uppercase text-white">Success to
+                                Everyone</span>
                         </div>
-                        <h1 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight mb-4 lg:mb-6 text-white drop-shadow-lg">
+                        <h1
+                            class="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight mb-4 lg:mb-6 text-white drop-shadow-lg">
                             Ignite Your Child's
-                            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-400">Potential Today</span>
+                            <span
+                                class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-400">Potential
+                                Today</span>
                         </h1>
-                        <p class="text-base sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        <p
+                            class="text-base sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
                             At Talent Zone Academy, we light the flame of knowledge that burns bright for a lifetime.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <a href="{{ route('schools') }}" class="group relative px-6 py-3 lg:px-8 lg:py-4 bg-white text-red-600 font-bold rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 text-sm lg:text-base">
+                            <a href="{{ route('schools') }}"
+                                class="group relative px-6 py-3 lg:px-8 lg:py-4 bg-white text-red-600 font-bold rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 text-sm lg:text-base">
                                 <span class="relative z-10 flex items-center gap-2">
                                     Explore Programs
-                                    <svg class="w-4 h-4 lg:w-5 lg:h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    <svg class="w-4 h-4 lg:w-5 lg:h-5 transition-transform group-hover:translate-x-1"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>
                                 </span>
                             </a>
@@ -77,35 +86,44 @@
 
         {{-- Slide 2: Medal Winners --}}
         <div x-show="currentSlide === 1" x-transition:enter="transition ease-out duration-1000"
-            x-transition:enter-start="opacity-0 scale-105"
-            x-transition:enter-end="opacity-100 scale-100"
-            x-transition:leave="transition ease-in duration-500"
-            x-transition:leave-start="opacity-100 scale-100"
-            x-transition:leave-end="opacity-0 scale-95"
-            class="absolute inset-0">
+            x-transition:enter-start="opacity-0 scale-105" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-500" x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95" class="absolute inset-0">
             <div class="absolute inset-0 bg-slate-900"></div>
-            <img src="{{ asset('images/hero-slide-2.jpg') }}" alt="Award Winning Students" class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
-            <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);"></div>
+            <img src="{{ asset('images/hero-slide-2.jpg') }}" alt="Award Winning Students"
+                class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
+            <div class="absolute inset-0"
+                style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);">
+            </div>
             <div class="absolute inset-0 flex items-center pt-20 lg:pt-0">
                 <div class="container-custom relative z-10">
                     <div class="max-w-2xl text-center lg:text-left">
-                        <div class="inline-flex items-center gap-2 px-3 py-1.5 lg:px-4 lg:py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-4 lg:mb-6 mx-auto lg:mx-0">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1.5 lg:px-4 lg:py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-4 lg:mb-6 mx-auto lg:mx-0">
                             <span class="text-sm lg:text-base">🏆</span>
-                            <span class="text-xs lg:text-sm font-bold tracking-wide uppercase text-white">Excellence in Education</span>
+                            <span class="text-xs lg:text-sm font-bold tracking-wide uppercase text-white">Excellence in
+                                Education</span>
                         </div>
-                        <h1 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight mb-4 lg:mb-6 text-white drop-shadow-lg">
+                        <h1
+                            class="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight mb-4 lg:mb-6 text-white drop-shadow-lg">
                             Building Tomorrow's
-                            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-cyan-300">Leaders Today</span>
+                            <span
+                                class="block text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-cyan-300">Leaders
+                                Today</span>
                         </h1>
-                        <p class="text-base sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
-                            29 years of educational excellence with 4,300+ successful students across 2 premium campuses.
+                        <p
+                            class="text-base sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+                            29 years of educational excellence with 4,300+ successful students across 2 premium schools.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <a href="{{ route('contact') }}" class="group relative px-6 py-3 lg:px-8 lg:py-4 bg-white text-blue-800 font-bold rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 text-sm lg:text-base">
+                            <a href="{{ route('contact') }}"
+                                class="group relative px-6 py-3 lg:px-8 lg:py-4 bg-white text-blue-800 font-bold rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 text-sm lg:text-base">
                                 <span class="relative z-10 flex items-center gap-2">
-                                    Book Campus Tour
-                                    <svg class="w-4 h-4 lg:w-5 lg:h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    Book School Tour
+                                    <svg class="w-4 h-4 lg:w-5 lg:h-5 transition-transform group-hover:translate-x-1"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>
                                 </span>
                             </a>
@@ -117,35 +135,44 @@
 
         {{-- Slide 3: Students Group with Garlands --}}
         <div x-show="currentSlide === 2" x-transition:enter="transition ease-out duration-1000"
-            x-transition:enter-start="opacity-0 scale-105"
-            x-transition:enter-end="opacity-100 scale-100"
-            x-transition:leave="transition ease-in duration-500"
-            x-transition:leave-start="opacity-100 scale-100"
-            x-transition:leave-end="opacity-0 scale-95"
-            class="absolute inset-0">
+            x-transition:enter-start="opacity-0 scale-105" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-500" x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95" class="absolute inset-0">
             <div class="absolute inset-0 bg-slate-900"></div>
-            <img src="{{ asset('images/hero-slide-3.jpg') }}" alt="Students Celebrating Success" class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
-            <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);"></div>
+            <img src="{{ asset('images/hero-slide-3.jpg') }}" alt="Students Celebrating Success"
+                class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
+            <div class="absolute inset-0"
+                style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);">
+            </div>
             <div class="absolute inset-0 flex items-center pt-20 lg:pt-0">
                 <div class="container-custom relative z-10">
                     <div class="max-w-2xl text-center lg:text-left">
-                        <div class="inline-flex items-center gap-2 px-3 py-1.5 lg:px-4 lg:py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-4 lg:mb-6 mx-auto lg:mx-0">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1.5 lg:px-4 lg:py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-4 lg:mb-6 mx-auto lg:mx-0">
                             <span class="text-sm lg:text-base">🎓</span>
-                            <span class="text-xs lg:text-sm font-bold tracking-wide uppercase text-white">Holistic Development</span>
+                            <span class="text-xs lg:text-sm font-bold tracking-wide uppercase text-white">Holistic
+                                Development</span>
                         </div>
-                        <h1 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight mb-4 lg:mb-6 text-white drop-shadow-lg">
+                        <h1
+                            class="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight mb-4 lg:mb-6 text-white drop-shadow-lg">
                             Where Dreams Take
-                            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-red-400">Flight</span>
+                            <span
+                                class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-red-400">Flight</span>
                         </h1>
-                        <p class="text-base sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
-                            World-class facilities, expert teachers, and a nurturing environment for your child's success.
+                        <p
+                            class="text-base sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+                            World-class facilities, expert teachers, and a nurturing environment for your child's
+                            success.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <a href="{{ route('schools') }}" class="group relative px-6 py-3 lg:px-8 lg:py-4 bg-white text-slate-900 font-bold rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 text-sm lg:text-base">
+                            <a href="{{ route('schools') }}"
+                                class="group relative px-6 py-3 lg:px-8 lg:py-4 bg-white text-slate-900 font-bold rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 text-sm lg:text-base">
                                 <span class="relative z-10 flex items-center gap-2">
-                                    View Our Campuses
-                                    <svg class="w-4 h-4 lg:w-5 lg:h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    View Our Schools
+                                    <svg class="w-4 h-4 lg:w-5 lg:h-5 transition-transform group-hover:translate-x-1"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>
                                 </span>
                             </a>
@@ -157,40 +184,51 @@
 
         {{-- Slide 4: Students Group Red Uniforms --}}
         <div x-show="currentSlide === 3" x-transition:enter="transition ease-out duration-1000"
-            x-transition:enter-start="opacity-0 scale-105"
-            x-transition:enter-end="opacity-100 scale-100"
-            x-transition:leave="transition ease-in duration-500"
-            x-transition:leave-start="opacity-100 scale-100"
-            x-transition:leave-end="opacity-0 scale-95"
-            class="absolute inset-0">
+            x-transition:enter-start="opacity-0 scale-105" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-500" x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95" class="absolute inset-0">
             <div class="absolute inset-0 bg-slate-900"></div>
-            <img src="{{ asset('images/hero-slide-4.jpg') }}" alt="Talent Zone Academy Students" class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
-            <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);"></div>
+            <img src="{{ asset('images/hero-slide-4.jpg') }}" alt="Talent Zone Academy Students"
+                class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
+            <div class="absolute inset-0"
+                style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);">
+            </div>
             <div class="absolute inset-0 flex items-center pt-20 lg:pt-0">
                 <div class="container-custom relative z-10">
                     <div class="max-w-2xl text-center lg:text-left">
                         <div class="inline-block px-4 py-1.5 lg:px-6 lg:py-2 rounded-full mb-4 lg:mb-8 shadow-lg shadow-red-500/20 animate-bounce"
                             style="background: linear-gradient(135deg, #E31E24 0%, #FF4444 100%);">
-                            <span class="text-xs lg:text-sm font-bold text-white tracking-wide">🎯 Admissions Open 2026-27</span>
+                            <span class="text-xs lg:text-sm font-bold text-white tracking-wide">🎯 Admissions Open
+                                2026-27</span>
                         </div>
-                        <h1 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight mb-4 lg:mb-8 text-white drop-shadow-lg">
+                        <h1
+                            class="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight mb-4 lg:mb-8 text-white drop-shadow-lg">
                             Join 4,300+ Students
-                            <span class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-400">Achieving Excellence</span>
+                            <span
+                                class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-400">Achieving
+                                Excellence</span>
                         </h1>
-                        <p class="text-base sm:text-xl lg:text-2xl text-white/90 mb-8 lg:mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        <p
+                            class="text-base sm:text-xl lg:text-2xl text-white/90 mb-8 lg:mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed">
                             Experience education that goes beyond textbooks. Join the Talent Zone Academy family today!
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <a href="{{ route('contact') }}" class="btn-primary text-base lg:text-lg px-8 py-3 lg:px-10 lg:py-5 inline-flex items-center justify-center gap-3 shadow-xl transform hover:-translate-y-1 transition-all">
+                            <a href="{{ route('contact') }}"
+                                class="btn-primary text-base lg:text-lg px-8 py-3 lg:px-10 lg:py-5 inline-flex items-center justify-center gap-3 shadow-xl transform hover:-translate-y-1 transition-all">
                                 Apply Now
-                                <svg class="w-4 h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                <svg class="w-4 h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
                             </a>
-                            <a href="{{ route('schools') }}" class="px-8 py-3 lg:px-10 lg:py-5 inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold rounded-xl hover:bg-white/20 transform hover:-translate-y-1 transition-all text-base lg:text-lg">
+                            <a href="{{ route('schools') }}"
+                                class="px-8 py-3 lg:px-10 lg:py-5 inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold rounded-xl hover:bg-white/20 transform hover:-translate-y-1 transition-all text-base lg:text-lg">
                                 Virtual Tour
-                                <svg class="w-4 h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                <svg class="w-4 h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                                 </svg>
                             </a>
                         </div>
@@ -238,7 +276,7 @@
 
         <div class="container-custom relative">
             <div class="text-center mb-16">
-                <p class="text-orange-coral text-sm font-bold tracking-wide uppercase mb-4">Our Campuses</p>
+                <p class="text-orange-coral text-sm font-bold tracking-wide uppercase mb-4">Our Schools</p>
                 <h2 class="font-display font-bold text-4xl md:text-5xl mb-6" style="color: #2B2826;">
                     Smart and clever kids<br>
                     ready to <span class="text-gradient-orange">fly high!</span>
@@ -261,7 +299,7 @@
         <section class="section-padding bg-white relative overflow-hidden">
             <div class="container-custom">
                 <x-public.section-heading eyebrow="Featured Video" title="{{ $activeVideo->title }}"
-                    subtitle="Experience our vibrant campus life and academic excellence." />
+                    subtitle="Experience our vibrant school life and academic excellence." />
 
                 <div class="max-w-4xl mx-auto">
                     <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl bg-slate-900">
@@ -297,7 +335,7 @@
                     </div>
                     <div>
                         <div class="font-display font-bold text-5xl text-white mb-1">2</div>
-                        <div class="text-white/80 text-base leading-tight">Premium Campuses<br>across Haryana</div>
+                        <div class="text-white/80 text-base leading-tight">Premium Schools<br>across Haryana</div>
                     </div>
                 </div>
 
@@ -569,12 +607,13 @@
 
         <div class="container-custom relative">
             <div class="text-center mb-16">
-                <p class="text-orange-coral text-sm font-bold tracking-wide uppercase mb-4">Life at Talent Zone Academy</p>
+                <p class="text-orange-coral text-sm font-bold tracking-wide uppercase mb-4">Life at Talent Zone Academy
+                </p>
                 <h2 class="font-display font-bold text-4xl md:text-5xl mb-6" style="color: #2B2826;">
-                    Campus <span class="text-gradient-orange">Life</span>
+                    School <span class="text-gradient-orange">Life</span>
                 </h2>
                 <p class="text-slate-600 text-lg max-w-2xl mx-auto">
-                    Explore moments of learning, achievement, and joy across our campuses.
+                    Explore moments of learning, achievement, and joy across our schools.
                 </p>
             </div>
 
@@ -596,7 +635,7 @@
                             <span
                                 class="inline-block px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium"
                                 style="color: #FF6B35;">
-                                {{ $image->category ?? 'Campus Life' }}
+                                {{ $image->category ?? 'School Life' }}
                             </span>
                             @if($image->title)
                                 <p class="text-white text-sm mt-2 font-medium">{{ $image->title }}</p>
@@ -722,7 +761,7 @@
 
     {{-- CTA Band --}}
     <x-public.cta-band title="Ready to Start Your Child's Journey?"
-        subtitle="Book a campus tour or submit an enquiry today. Our admissions team will guide you through the process."
-        primaryText="Book Campus Tour" primaryUrl="{{ route('contact') }}" secondaryText="Enquire Now"
+        subtitle="Book a school tour or submit an enquiry today. Our admissions team will guide you through the process."
+        primaryText="Book School Tour" primaryUrl="{{ route('contact') }}" secondaryText="Enquire Now"
         secondaryUrl="{{ route('contact') }}" />
 </x-public-layout>

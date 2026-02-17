@@ -50,11 +50,11 @@ return [
                 'Robotics Center',
                 'Sports Academy',
                 'Music & Arts Wing',
-                'Eco-Friendly Campus',
+                'Eco-Friendly School',
             ],
             'principal' => [
                 'name' => 'Mr. Rajesh Kumar',
-                'message' => 'Our Kurukshetra campus is a vibrant community where students discover their passions and develop skills for the future. We nurture curiosity and creativity in every learner.',
+                'message' => 'Our Kurukshetra school is a vibrant community where students discover their passions and develop skills for the future. We nurture curiosity and creativity in every learner.',
                 'image' => '/images/staff/principal-kurukshetra.jpg',
             ],
         ],
@@ -103,7 +103,7 @@ return [
     'testimonials' => [
         [
             'name' => 'Meera Patel',
-            'role' => 'Parent, Karnal Campus',
+            'role' => 'Parent, Karnal School',
             'content' => 'Talent Zone Academy has transformed my daughter\'s learning experience. The teachers are truly dedicated and the facilities are outstanding.',
             'image' => '/images/testimonials/parent-1.jpg',
         ],
@@ -115,7 +115,7 @@ return [
         ],
         [
             'name' => 'Dr. Sunita Rao',
-            'role' => 'Parent, Kurukshetra Campus',
+            'role' => 'Parent, Kurukshetra School',
             'content' => 'The perfect blend of academics and extracurriculars. Both my children have flourished here.',
             'image' => '/images/testimonials/parent-2.jpg',
         ],
@@ -131,10 +131,10 @@ return [
         [
             'name' => 'Dr. Kavita Reddy',
             'role' => 'Director of Education',
-            'bio' => 'A PhD in Educational Psychology from Cambridge, Dr. Reddy oversees curriculum development and teacher training across all campuses.',
+            'bio' => 'A PhD in Educational Psychology from Cambridge, Dr. Reddy oversees curriculum development and teacher training across all schools.',
             'image' => '/images/staff/director.jpg',
         ],
     ],
 
-    'gallery_categories' => ['All', 'Campus', 'Events', 'Sports', 'Labs'],
+    'gallery_categories' => ['All', 'School', 'Events', 'Sports', 'Labs'],
 ];
