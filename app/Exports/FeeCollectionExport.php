@@ -25,10 +25,10 @@ class FeeCollectionExport implements FromCollection, WithHeadings, WithMapping, 
     public function collection()
     {
         return FeeReceipt::with('student')
-            ->where('status', 'paid')
-            ->whereBetween('receipt_date', [$this->fromDate, $this->toDate])
+            ->where('cancelled', false)
+            ->whereBetween('payment_date', [$this->fromDate, $this->toDate])
             ->when($this->paymentMode, fn($q) => $q->where('payment_mode', $this->paymentMode))
-            ->orderBy('receipt_date', 'desc')
+            ->orderBy('payment_date', 'desc')
             ->orderBy('id', 'desc')
             ->get();
     }
@@ -51,7 +51,7 @@ class FeeCollectionExport implements FromCollection, WithHeadings, WithMapping, 
     {
         return [
             $receipt->receipt_no,
-            $receipt->receipt_date->format('d/m/Y'),
+            $receipt->payment_date->format('d/m/Y'),
             $receipt->student->admission_no ?? '-',
             $receipt->student->name ?? '-',
             $receipt->student->schoolClass?->name ?? '-',

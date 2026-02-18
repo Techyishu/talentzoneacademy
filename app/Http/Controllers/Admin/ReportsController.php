@@ -27,30 +27,30 @@ class ReportsController extends Controller
         $paymentMode = $request->get('payment_mode');
 
         // Get collection summary by date
-        $dailyCollection = FeeReceipt::where('status', 'paid')
-            ->whereBetween('receipt_date', [$fromDate, $toDate])
+        $dailyCollection = FeeReceipt::where('cancelled', false)
+            ->whereBetween('payment_date', [$fromDate, $toDate])
             ->when($paymentMode, fn($q) => $q->where('payment_mode', $paymentMode))
-            ->selectRaw('DATE(receipt_date) as date, payment_mode, SUM(amount) as total, COUNT(*) as count')
+            ->selectRaw('DATE(payment_date) as date, payment_mode, SUM(amount) as total, COUNT(*) as count')
             ->groupBy('date', 'payment_mode')
             ->orderBy('date', 'desc')
             ->get();
 
         // Get totals by payment mode
-        $totalsByMode = FeeReceipt::where('status', 'paid')
-            ->whereBetween('receipt_date', [$fromDate, $toDate])
+        $totalsByMode = FeeReceipt::where('cancelled', false)
+            ->whereBetween('payment_date', [$fromDate, $toDate])
             ->when($paymentMode, fn($q) => $q->where('payment_mode', $paymentMode))
             ->selectRaw('payment_mode, SUM(amount) as total, COUNT(*) as count')
             ->groupBy('payment_mode')
             ->get();
 
         // Get grand total
-        $grandTotal = FeeReceipt::where('status', 'paid')
-            ->whereBetween('receipt_date', [$fromDate, $toDate])
+        $grandTotal = FeeReceipt::where('cancelled', false)
+            ->whereBetween('payment_date', [$fromDate, $toDate])
             ->when($paymentMode, fn($q) => $q->where('payment_mode', $paymentMode))
             ->sum('amount');
 
-        $totalReceipts = FeeReceipt::where('status', 'paid')
-            ->whereBetween('receipt_date', [$fromDate, $toDate])
+        $totalReceipts = FeeReceipt::where('cancelled', false)
+            ->whereBetween('payment_date', [$fromDate, $toDate])
             ->when($paymentMode, fn($q) => $q->where('payment_mode', $paymentMode))
             ->count();
 
@@ -58,9 +58,9 @@ class ReportsController extends Controller
         $collectionByFeeHead = DB::table('fee_receipt_items')
             ->join('fee_receipts', 'fee_receipt_items.fee_receipt_id', '=', 'fee_receipts.id')
             ->join('fee_heads', 'fee_receipt_items.fee_head_id', '=', 'fee_heads.id')
-            ->where('fee_receipts.status', 'paid')
+            ->where('fee_receipts.cancelled', false)
             ->where('fee_receipts.school_id', session('active_school_id'))
-            ->whereBetween('fee_receipts.receipt_date', [$fromDate, $toDate])
+            ->whereBetween('fee_receipts.payment_date', [$fromDate, $toDate])
             ->selectRaw('fee_heads.name as fee_head, SUM(fee_receipt_items.amount) as total')
             ->groupBy('fee_heads.id', 'fee_heads.name')
             ->orderByDesc('total')
@@ -68,10 +68,10 @@ class ReportsController extends Controller
 
         // Recent receipts
         $recentReceipts = FeeReceipt::with('student')
-            ->where('status', 'paid')
-            ->whereBetween('receipt_date', [$fromDate, $toDate])
+            ->where('cancelled', false)
+            ->whereBetween('payment_date', [$fromDate, $toDate])
             ->when($paymentMode, fn($q) => $q->where('payment_mode', $paymentMode))
-            ->orderBy('receipt_date', 'desc')
+            ->orderBy('payment_date', 'desc')
             ->orderBy('id', 'desc')
             ->limit(20)
             ->get();
@@ -112,18 +112,24 @@ class ReportsController extends Controller
         $status = $request->get('status', 'active');
 
         // Get students count by class and section
-        $classSummary = SchoolClass::withCount(['students' => function ($query) use ($status) {
+        $classSummary = SchoolClass::withCount([
+            'students' => function ($query) use ($status) {
                 if ($status !== 'all') {
                     $query->where('status', $status);
                 }
-            }])
-            ->with(['sections' => function ($query) use ($status) {
-                $query->withCount(['students' => function ($q) use ($status) {
-                    if ($status !== 'all') {
-                        $q->where('status', $status);
-                    }
-                }]);
-            }])
+            }
+        ])
+            ->with([
+                'sections' => function ($query) use ($status) {
+                    $query->withCount([
+                        'students' => function ($q) use ($status) {
+                            if ($status !== 'all') {
+                                $q->where('status', $status);
+                            }
+                        }
+                    ]);
+                }
+            ])
             ->orderBy('display_order')
             ->orderBy('name')
             ->get();
