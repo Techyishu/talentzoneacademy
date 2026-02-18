@@ -176,27 +176,6 @@
                     </div>
                     @endif
 
-                    {{-- Principal's Message --}}
-                    <div class="relative bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl p-8 md:p-12 overflow-hidden">
-                        {{-- Decorative --}}
-                        <div class="absolute top-0 right-0 w-64 h-64 {{ $colors['light'] }} rounded-full filter blur-3xl opacity-50"></div>
-                        
-                        <div class="relative flex flex-col md:flex-row gap-8 items-start">
-                            <div class="w-28 h-28 rounded-2xl bg-gradient-to-br {{ $colors['light'] }} flex-shrink-0 flex items-center justify-center shadow-lg">
-                                <span class="{{ $colors['text'] }} font-bold text-3xl">{{ substr($school['principal']['name'], 0, 1) }}</span>
-                            </div>
-                            <div>
-                                <span class="badge badge-primary mb-4">Principal's Message</span>
-                                <p class="text-slate-700 text-xl italic leading-relaxed mb-6">
-                                    "{{ $school['principal']['message'] }}"
-                                </p>
-                                <div>
-                                    <div class="font-bold text-slate-900 text-lg">{{ $school['principal']['name'] }}</div>
-                                    <div class="text-slate-500">Principal, {{ Str::after($school['name'], 'Talent Zone Academy ') }}</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 {{-- Facilities --}}
