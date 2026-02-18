@@ -29,7 +29,7 @@ return [
                 'Olympiad Training',
             ],
             'md' => [
-                'name' => 'Managing Director',
+                'name' => 'Er. Arvind Dahiya',
                 'message' => 'At Talent Zone Academy, we believe every child has the potential to achieve greatness. Our mission is to provide result-oriented education that builds strong foundations, sharpens competitive skills, and nurtures confident individuals ready to take on any challenge. We are committed to giving every student the tools, guidance, and personal attention they need to succeed.',
                 'image' => '/images/staff/md.jpg',
             ],
@@ -53,12 +53,12 @@ return [
                 'Olympiad Training',
             ],
             'md' => [
-                'name' => 'Managing Director',
+                'name' => 'Er. Arvind Dahiya',
                 'message' => 'At Talent Zone Academy, we believe every child has the potential to achieve greatness. Our mission is to provide result-oriented education that builds strong foundations, sharpens competitive skills, and nurtures confident individuals ready to take on any challenge. We are committed to giving every student the tools, guidance, and personal attention they need to succeed.',
                 'image' => '/images/staff/md.jpg',
             ],
             'academic_director' => [
-                'name' => 'Academic Director',
+                'name' => 'Mr. Lalit Dahiya',
                 'message' => 'Our academic approach is built on the 3-Pillar System — Visual Mastery through Smart Panels, the Plus-One Strategy to keep students ahead of the syllabus, and Small Batch Focus for personal attention. Every lesson is designed to build depth of understanding and competitive readiness, ensuring our students are always one step ahead in their preparation for Sainik School, RMS, RIMC, and Olympiad exams.',
                 'image' => '/images/staff/academic-director-kurukshetra.jpg',
             ],
