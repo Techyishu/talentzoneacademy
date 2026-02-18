@@ -14,7 +14,7 @@ class ClassController extends Controller
      */
     public function index()
     {
-        $classes = SchoolClass::with(['sections', 'students'])
+        $classes = SchoolClass::with(['sections.students', 'students'])
             ->orderBy('display_order')
             ->orderBy('name')
             ->get();
@@ -47,13 +47,26 @@ class ClassController extends Controller
                 Rule::unique('classes', 'name')->where('school_id', $schoolId),
             ],
             'display_order' => 'nullable|integer|min:0',
+            'sections' => 'nullable|array',
+            'sections.*' => 'string|max:50',
         ]);
 
-        SchoolClass::create(array_merge($validated, ['school_id' => $schoolId]));
+        $sections = $validated['sections'] ?? [];
+        unset($validated['sections']);
+
+        $class = SchoolClass::create(array_merge($validated, ['school_id' => $schoolId]));
+
+        // Create sections if provided
+        foreach ($sections as $sectionName) {
+            $class->sections()->create([
+                'school_id' => $schoolId,
+                'name' => trim($sectionName),
+            ]);
+        }
 
         return redirect()
             ->route('admin.classes.index')
-            ->with('success', 'Class created successfully.');
+            ->with('success', 'Class created successfully' . (count($sections) > 0 ? ' with ' . count($sections) . ' section(s).' : '.'));
     }
 
     /**
