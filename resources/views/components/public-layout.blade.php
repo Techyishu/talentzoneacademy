@@ -48,21 +48,7 @@
         }
 
         .welcome-enter-btn {
-            background: linear-gradient(135deg, #FF6B35 0%, #FF8C61 100%);
-            box-shadow: 0 0 30px rgba(255, 107, 53, 0.4), 0 0 60px rgba(255, 107, 53, 0.1);
-            animation: pulseGlow 2s ease-in-out infinite;
-        }
-
-        @keyframes pulseGlow {
-
-            0%,
-            100% {
-                box-shadow: 0 0 30px rgba(255, 107, 53, 0.4), 0 0 60px rgba(255, 107, 53, 0.1);
-            }
-
-            50% {
-                box-shadow: 0 0 40px rgba(255, 107, 53, 0.6), 0 0 80px rgba(255, 107, 53, 0.2);
-            }
+            /* removed - using inline styles */
         }
 
         .particle {
@@ -155,37 +141,40 @@
         <div class="absolute bottom-20 right-20 w-80 h-80 rounded-full opacity-5 bg-blue-400 blur-3xl"></div>
 
         {{-- Content --}}
-        <div class="text-center px-6 relative z-10">
+        <div class="text-center px-4 sm:px-6 relative z-10 w-full max-w-lg mx-auto">
             {{-- Logo --}}
-            <div class="welcome-logo mb-8">
+            <div class="welcome-logo mb-6 sm:mb-8">
                 <img src="{{ asset('images/logo.png') }}" alt="{{ config('app.name') }}"
-                    class="w-28 h-28 md:w-36 md:h-36 mx-auto rounded-3xl shadow-2xl shadow-black/30 object-contain bg-white/10 backdrop-blur-sm p-3">
+                    class="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 mx-auto rounded-2xl sm:rounded-3xl shadow-2xl shadow-black/30 object-contain bg-white/10 backdrop-blur-sm p-2 sm:p-3">
             </div>
 
             {{-- School Name --}}
-            <h1 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-white mb-3 tracking-tight">
+            <h1
+                class="font-display font-bold text-2xl sm:text-4xl md:text-5xl text-white mb-2 sm:mb-3 tracking-tight leading-tight">
                 Talent Zone
                 <span
                     class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-orange-400">Academy</span>
             </h1>
 
             {{-- Tagline --}}
-            <p class="text-white/60 text-base sm:text-lg mb-10 max-w-md mx-auto font-light tracking-wide">
+            <p
+                class="text-white/60 text-sm sm:text-base md:text-lg mb-8 sm:mb-10 max-w-md mx-auto font-light tracking-wide">
                 Success to Everyone
             </p>
 
             {{-- Enter Button --}}
             <button @click="enterSite()"
-                class="welcome-enter-btn group relative px-10 py-4 sm:px-14 sm:py-5 rounded-2xl text-white font-bold text-base sm:text-lg tracking-wide transition-all duration-300 hover:scale-105 active:scale-95">
-                <span class="relative z-10 flex items-center gap-3 justify-center">
+                style="background: linear-gradient(135deg, #FF6B35 0%, #FF8C61 100%); box-shadow: 0 4px 25px rgba(255, 107, 53, 0.4);"
+                class="group w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 rounded-2xl text-white font-bold text-base sm:text-lg tracking-wide transition-all duration-300 hover:opacity-90 hover:shadow-lg active:scale-95 border border-white/20">
+                <span class="flex items-center gap-2 sm:gap-3 justify-center">
                     @if($activeMusic)
-                        <svg class="w-5 h-5 sm:w-6 sm:h-6 opacity-80" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-5 h-5 opacity-80" fill="currentColor" viewBox="0 0 20 20">
                             <path
                                 d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
                         </svg>
                     @endif
                     Enter Website
-                    <svg class="w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover:translate-x-1" fill="none"
+                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -194,7 +183,7 @@
             </button>
 
             @if($activeMusic)
-                <p class="text-white/30 text-xs mt-6 flex items-center justify-center gap-1.5">
+                <p class="text-white/30 text-xs mt-4 sm:mt-6 flex items-center justify-center gap-1.5">
                     <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
                             d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z"
@@ -231,15 +220,15 @@
                 class="bg-white/95 backdrop-blur-lg rounded-2xl shadow-xl border border-slate-200 p-4 flex items-center gap-3 min-w-[200px]">
                 {{-- Play/Pause Button --}}
                 <button @click="
-                        const audio = $refs.bgAudio;
-                        if (musicPlaying) {
-                            audio.pause();
-                        } else {
-                            audio.volume = volume;
-                            audio.play();
-                        }
-                        musicPlaying = !musicPlaying;
-                    " class="w-10 h-10 rounded-full flex items-center justify-center transition-all"
+                                const audio = $refs.bgAudio;
+                                if (musicPlaying) {
+                                    audio.pause();
+                                } else {
+                                    audio.volume = volume;
+                                    audio.play();
+                                }
+                                musicPlaying = !musicPlaying;
+                            " class="w-10 h-10 rounded-full flex items-center justify-center transition-all"
                     :class="musicPlaying ? 'bg-primary-100 text-primary-600' : 'bg-slate-100 text-slate-600 hover:bg-primary-50 hover:text-primary-600'">
                     <template x-if="!musicPlaying">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -263,10 +252,10 @@
 
                 {{-- Close Button --}}
                 <button @click="
-                        $refs.bgAudio.pause();
-                        musicPlaying = false;
-                        showPlayer = false;
-                    " class="text-slate-400 hover:text-slate-600">
+                                $refs.bgAudio.pause();
+                                musicPlaying = false;
+                                showPlayer = false;
+                            " class="text-slate-400 hover:text-slate-600">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
