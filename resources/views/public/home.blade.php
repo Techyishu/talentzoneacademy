@@ -42,7 +42,7 @@
             x-transition:leave-end="opacity-0 scale-95" class="absolute inset-0">
             <div class="absolute inset-0 bg-slate-900"></div>
             <img src="{{ asset('images/hero-slide-1.jpg') }}" alt="Talent Zone Academy School"
-                class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
+                class="absolute inset-0 w-full h-full object-cover">
             <div class="absolute inset-0"
                 style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);">
             </div>
@@ -91,7 +91,7 @@
             x-transition:leave-end="opacity-0 scale-95" class="absolute inset-0">
             <div class="absolute inset-0 bg-slate-900"></div>
             <img src="{{ asset('images/hero-slide-2.jpg') }}" alt="Award Winning Students"
-                class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
+                class="absolute inset-0 w-full h-full object-cover">
             <div class="absolute inset-0"
                 style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);">
             </div>
@@ -113,7 +113,8 @@
                         </h1>
                         <p
                             class="text-base sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
-                            Result-oriented education with structured preparation for Sainik School, RMS, RIMC, and Olympiads.
+                            Result-oriented education with structured preparation for Sainik School, RMS, RIMC, and
+                            Olympiads.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <a href="{{ route('contact') }}"
@@ -140,7 +141,7 @@
             x-transition:leave-end="opacity-0 scale-95" class="absolute inset-0">
             <div class="absolute inset-0 bg-slate-900"></div>
             <img src="{{ asset('images/hero-slide-3.jpg') }}" alt="Students Celebrating Success"
-                class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
+                class="absolute inset-0 w-full h-full object-cover">
             <div class="absolute inset-0"
                 style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);">
             </div>
@@ -161,7 +162,8 @@
                         </h1>
                         <p
                             class="text-base sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
-                            Smart teaching methods, personal attention, and structured preparation for competitive success.
+                            Smart teaching methods, personal attention, and structured preparation for competitive
+                            success.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <a href="{{ route('schools') }}"
@@ -188,7 +190,7 @@
             x-transition:leave-end="opacity-0 scale-95" class="absolute inset-0">
             <div class="absolute inset-0 bg-slate-900"></div>
             <img src="{{ asset('images/hero-slide-4.jpg') }}" alt="Talent Zone Academy Students"
-                class="absolute inset-0 w-full h-full object-cover lg:object-contain lg:object-right">
+                class="absolute inset-0 w-full h-full object-cover">
             <div class="absolute inset-0"
                 style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);">
             </div>
@@ -204,7 +206,8 @@
                             class="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight mb-4 lg:mb-8 text-white drop-shadow-lg">
                             Join the Academy of
                             <span
-                                class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-400">Winners &
+                                class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-400">Winners
+                                &
                                 Achievers</span>
                         </h1>
                         <p
@@ -389,8 +392,10 @@
                     <div class="relative mb-6">
                         <div class="w-32 h-32 mx-auto rounded-full flex items-center justify-center relative overflow-hidden"
                             style="background: linear-gradient(135deg, #E31E24 0%, #FF4444 100%);">
-                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                             </svg>
                         </div>
                         <div class="absolute -top-2 -right-2 w-8 h-8 rounded-full opacity-70"
@@ -411,8 +416,10 @@
                     <div class="relative mb-6">
                         <div class="w-32 h-32 mx-auto rounded-full flex items-center justify-center relative overflow-hidden"
                             style="background: linear-gradient(135deg, #FF6B35 0%, #FF8C61 100%);">
-                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
                             </svg>
                         </div>
                         <div class="absolute -bottom-2 -left-2 w-6 h-6 rounded-full opacity-70"
@@ -433,8 +440,10 @@
                     <div class="relative mb-6">
                         <div class="w-32 h-32 mx-auto rounded-full flex items-center justify-center relative overflow-hidden"
                             style="background: linear-gradient(135deg, #003B71 0%, #0066CC 100%);">
-                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
                         </div>
                         <div class="absolute -top-2 -left-2 w-7 h-7 rounded-full opacity-70"
@@ -455,8 +464,10 @@
                     <div class="relative mb-6">
                         <div class="w-32 h-32 mx-auto rounded-full flex items-center justify-center relative overflow-hidden"
                             style="background: linear-gradient(135deg, #10B981 0%, #34D399 100%);">
-                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                             </svg>
                         </div>
                         <div class="absolute -bottom-2 -right-2 w-8 h-8 rounded-full opacity-70"
