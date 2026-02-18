@@ -491,15 +491,15 @@
 
             {{-- Winning Formula --}}
             <div class="gradient-warm rounded-3xl p-8 md:p-10 text-center max-w-2xl mx-auto">
-                <h3 class="font-display font-bold text-2xl text-white mb-6">Our Winning Formula</h3>
+                <h3 class="font-display font-bold text-2xl text-black mb-6">Our Winning Formula</h3>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-base md:text-lg font-bold">
-                    <span class="bg-white/20 rounded-xl px-5 py-2.5 text-white">Smart Teaching</span>
-                    <span class="text-xl text-white">+</span>
-                    <span class="bg-white/20 rounded-xl px-5 py-2.5 text-white">Extra Practice</span>
-                    <span class="text-xl text-white">+</span>
-                    <span class="bg-white/20 rounded-xl px-5 py-2.5 text-white">Personal Attention</span>
+                    <span class="bg-white/20 rounded-xl px-5 py-2.5 text-black">Smart Teaching</span>
+                    <span class="text-xl text-black">+</span>
+                    <span class="bg-white/20 rounded-xl px-5 py-2.5 text-black">Extra Practice</span>
+                    <span class="text-xl text-black">+</span>
+                    <span class="bg-white/20 rounded-xl px-5 py-2.5 text-   black">Personal Attention</span>
                 </div>
-                <p class="mt-6 text-white text-xl font-bold">= Big Results</p>
+                <p class="mt-6 text-black text-xl font-bold">= Big Results</p>
             </div>
         </div>
     </section>
