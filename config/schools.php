@@ -31,7 +31,7 @@ return [
             'chairman' => [
                 'name' => 'Mr. Sanjeev Kumar',
                 'message' => 'Education is the most powerful investment we can make in our children. At Talent Zone Academy, we have created an environment where every student is encouraged to dream big, work hard, and achieve excellence. Our vision is to shape young minds into disciplined, confident, and competitive individuals who are ready to take on any challenge life presents.',
-                'image' => '/images/staff/chairman.jpg',
+                'image' => '/images/staff/chairman.png',
             ],
             'md' => [
                 'name' => 'Er. Arvind Dahiya',
@@ -60,7 +60,7 @@ return [
             'chairman' => [
                 'name' => 'Mr. Sanjeev Kumar',
                 'message' => 'Education is the most powerful investment we can make in our children. At Talent Zone Academy, we have created an environment where every student is encouraged to dream big, work hard, and achieve excellence. Our vision is to shape young minds into disciplined, confident, and competitive individuals who are ready to take on any challenge life presents.',
-                'image' => '/images/staff/chairman.jpg',
+                'image' => '/images/staff/chairman.png',
             ],
             'md' => [
                 'name' => 'Er. Arvind Dahiya',
