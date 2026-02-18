@@ -250,15 +250,23 @@
 
     @push('scripts')
     <script>
-        // Toggle parent fields visibility
-        document.getElementById('link_parent').addEventListener('change', function() {
-            const parentFields = document.getElementById('parent-fields');
-            if (this.checked) {
+        // Toggle parent fields visibility and disable when hidden
+        const linkParentCheckbox = document.getElementById('link_parent');
+        const parentFields = document.getElementById('parent-fields');
+
+        function toggleParentFields() {
+            if (linkParentCheckbox.checked) {
                 parentFields.style.display = 'block';
+                parentFields.querySelectorAll('input, select').forEach(el => el.disabled = false);
             } else {
                 parentFields.style.display = 'none';
+                parentFields.querySelectorAll('input, select').forEach(el => el.disabled = true);
             }
-        });
+        }
+
+        linkParentCheckbox.addEventListener('change', toggleParentFields);
+        // Run on page load to handle validation errors (form re-render)
+        toggleParentFields();
     </script>
     @endpush
 </x-layouts.admin>

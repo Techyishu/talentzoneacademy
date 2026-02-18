@@ -44,10 +44,10 @@ class StoreStudentRequest extends FormRequest
 
             // Optional parent linking fields
             'link_parent' => 'nullable|boolean',
-            'parent_name' => 'required_if:link_parent,true|string|max:255',
-            'parent_email' => 'required_if:link_parent,true|email|max:255',
-            'parent_phone' => 'required_if:link_parent,true|string|max:20',
-            'relationship' => 'required_if:link_parent,true|in:father,mother,guardian,other',
+            'parent_name' => 'nullable|required_if:link_parent,1|string|max:255',
+            'parent_email' => 'nullable|required_if:link_parent,1|email|max:255',
+            'parent_phone' => 'nullable|required_if:link_parent,1|string|max:20',
+            'relationship' => 'nullable|required_if:link_parent,1|in:father,mother,guardian,other',
             'create_parent_account' => 'nullable|boolean',
         ];
     }
