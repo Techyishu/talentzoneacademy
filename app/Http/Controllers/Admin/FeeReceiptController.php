@@ -131,7 +131,7 @@ class FeeReceiptController extends Controller
         $validated = $request->validate([
             'student_id' => 'required|exists:students,id',
             'academic_session_id' => 'nullable|exists:academic_sessions,id',
-            'payment_mode' => 'required|in:cash,cheque,online,card',
+            'payment_mode' => 'required|in:cash,cheque,online,upi,card',
             'payment_date' => 'required|date',
             'fee_month' => 'nullable|string|max:20',
             'remarks' => 'nullable|string',
@@ -187,7 +187,7 @@ class FeeReceiptController extends Controller
             'parent_user_id' => 'required|exists:users,id',
             'academic_session_id' => 'nullable|exists:academic_sessions,id',
             'amount' => 'required|numeric|min:0.01',
-            'payment_mode' => 'required|in:cash,cheque,online,card',
+            'payment_mode' => 'required|in:cash,cheque,online,upi,card',
             'payment_date' => 'required|date',
             'fee_month' => 'nullable|string|max:20',
             'remarks' => 'nullable|string',

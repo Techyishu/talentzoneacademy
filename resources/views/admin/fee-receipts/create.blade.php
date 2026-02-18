@@ -105,6 +105,8 @@
                                         </option>
                                         <option value="online" {{ old('payment_mode') == 'online' ? 'selected' : '' }}>
                                             Online</option>
+                                        <option value="upi" {{ old('payment_mode') == 'upi' ? 'selected' : '' }}>UPI
+                                        </option>
                                         <option value="cheque" {{ old('payment_mode') == 'cheque' ? 'selected' : '' }}>
                                             Cheque</option>
                                         <option value="card" {{ old('payment_mode') == 'card' ? 'selected' : '' }}>Card
@@ -313,6 +315,7 @@
                                             <option value="">Select Mode</option>
                                             <option value="cash">Cash</option>
                                             <option value="online">Online</option>
+                                            <option value="upi">UPI</option>
                                             <option value="cheque">Cheque</option>
                                             <option value="card">Card</option>
                                         </select>
@@ -385,6 +388,8 @@
         // Add first fee item on page load
         document.addEventListener('DOMContentLoaded', function () {
             addFeeItem();
+            // Disable family form fields by default (student payment is default)
+            document.getElementById('family-payment-form').querySelectorAll('input, select, textarea').forEach(el => el.disabled = true);
         });
 
         // Toggle between student and family payment forms
@@ -396,16 +401,16 @@
             if (paymentType === 'student') {
                 studentForm.style.display = 'block';
                 familyForm.style.display = 'none';
-                // Make student fields required
+                // Enable student fields, disable family fields
+                studentForm.querySelectorAll('input, select, textarea').forEach(el => el.disabled = false);
+                familyForm.querySelectorAll('input, select, textarea').forEach(el => el.disabled = true);
                 document.getElementById('student_id').required = true;
-                // Make family fields optional
-                document.getElementById('parent_user_id').required = false;
             } else {
                 studentForm.style.display = 'none';
                 familyForm.style.display = 'block';
-                // Make student fields optional
-                document.getElementById('student_id').required = false;
-                // Make family fields required
+                // Enable family fields, disable student fields
+                familyForm.querySelectorAll('input, select, textarea').forEach(el => el.disabled = false);
+                studentForm.querySelectorAll('input, select, textarea').forEach(el => el.disabled = true);
                 document.getElementById('parent_user_id').required = true;
             }
         }
