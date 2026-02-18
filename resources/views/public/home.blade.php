@@ -726,6 +726,156 @@
                     </div>
                 @endforelse
             </div>
+
+            {{-- Success Toast --}}
+            @if(session('review_success'))
+                <div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 5000)"
+                    x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4"
+                    x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                    class="fixed bottom-6 right-6 z-50 bg-green-600 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 max-w-sm">
+                    <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-sm font-medium">{{ session('review_success') }}</span>
+                    <button @click="show = false" class="ml-2 text-white/80 hover:text-white">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            @endif
+
+            {{-- Share Your Experience Form --}}
+            <div class="mt-16 max-w-2xl mx-auto" x-data="{ rating: 5, hoverRating: 0 }">
+                <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+                    {{-- Form Header --}}
+                    <div class="px-8 pt-8 pb-4">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-10 h-10 rounded-xl flex items-center justify-center"
+                                style="background: linear-gradient(135deg, #FF6B35 0%, #FF8C61 100%);">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-xl" style="color: #2B2826;">Share Your Experience
+                                </h3>
+                                <p class="text-slate-500 text-sm">We'd love to hear from you! Your review helps other
+                                    parents.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="{{ route('reviews.store') }}" method="POST" class="px-8 pb-8">
+                        @csrf
+
+                        <div class="space-y-5">
+                            {{-- Name & Email Row --}}
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="reviewer_name"
+                                        class="block text-sm font-semibold text-slate-700 mb-1.5">Your Name <span
+                                            class="text-red-500">*</span></label>
+                                    <input type="text" name="reviewer_name" id="reviewer_name" required
+                                        value="{{ old('reviewer_name') }}" placeholder="e.g. Rajesh Sharma"
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all text-sm">
+                                    @error('reviewer_name')
+                                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                                <div>
+                                    <label for="reviewer_email"
+                                        class="block text-sm font-semibold text-slate-700 mb-1.5">Email <span
+                                            class="text-slate-400 font-normal">(optional)</span></label>
+                                    <input type="email" name="reviewer_email" id="reviewer_email"
+                                        value="{{ old('reviewer_email') }}" placeholder="your@email.com"
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all text-sm">
+                                    @error('reviewer_email')
+                                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            {{-- School & Rating Row --}}
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="school_id"
+                                        class="block text-sm font-semibold text-slate-700 mb-1.5">School <span
+                                            class="text-slate-400 font-normal">(optional)</span></label>
+                                    <select name="school_id" id="school_id"
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all text-sm">
+                                        <option value="">Select a school</option>
+                                        @foreach($schoolsList as $school)
+                                            <option value="{{ $school->id }}" {{ old('school_id') == $school->id ? 'selected' : '' }}>
+                                                {{ $school->name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-1.5">Rating <span
+                                            class="text-red-500">*</span></label>
+                                    <input type="hidden" name="rating" :value="rating">
+                                    <div class="flex items-center gap-1 py-2">
+                                        <template x-for="star in 5" :key="star">
+                                            <button type="button" @click="rating = star"
+                                                @mouseenter="hoverRating = star" @mouseleave="hoverRating = 0"
+                                                class="focus:outline-none transition-transform hover:scale-110">
+                                                <svg class="w-8 h-8 transition-colors duration-150" fill="currentColor"
+                                                    viewBox="0 0 20 20"
+                                                    :class="star <= (hoverRating || rating) ? 'text-amber-400' : 'text-slate-200'">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                            </button>
+                                        </template>
+                                        <span class="ml-2 text-sm text-slate-500"
+                                            x-text="['', 'Poor', 'Fair', 'Good', 'Very Good', 'Excellent'][rating]"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- Review Content --}}
+                            <div>
+                                <label for="review_content"
+                                    class="block text-sm font-semibold text-slate-700 mb-1.5">Your Review <span
+                                        class="text-red-500">*</span></label>
+                                <textarea name="content" id="review_content" rows="4" required minlength="10"
+                                    maxlength="1000" placeholder="Share your experience with Talent Zone Academy..."
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all text-sm resize-none">{{ old('content') }}</textarea>
+                                @error('content')
+                                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                                @enderror
+                                <p class="text-slate-400 text-xs mt-1">Minimum 10 characters</p>
+                            </div>
+
+                            {{-- Submit --}}
+                            <div class="flex items-center justify-between pt-2">
+                                <p class="text-slate-400 text-xs flex items-center gap-1">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                    </svg>
+                                    Your review will be published after approval
+                                </p>
+                                <button type="submit"
+                                    class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+                                    style="background: linear-gradient(135deg, #FF6B35 0%, #FF8C61 100%);">
+                                    Submit Review
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
         </div>
     </section>
 

@@ -14,8 +14,9 @@ Route::get('/', function () {
     $activeVideo = \App\Models\HomepageVideo::active()->first();
     $activeMusic = \App\Models\BackgroundMusic::active()->first();
     $galleryImages = \App\Models\GalleryImage::orderBy('display_order')->take(6)->get();
+    $schoolsList = \App\Models\School::orderBy('name')->get();
 
-    return view('public.home', compact('approvedReviews', 'activeVideo', 'activeMusic', 'galleryImages'));
+    return view('public.home', compact('approvedReviews', 'activeVideo', 'activeMusic', 'galleryImages', 'schoolsList'));
 })->name('home');
 
 
@@ -63,6 +64,10 @@ Route::get('/contact', function () {
 Route::post('/contact', [\App\Http\Controllers\Public\ContactController::class, 'store'])
     ->middleware('throttle:5,1')
     ->name('contact.store');
+
+Route::post('/reviews', [\App\Http\Controllers\Public\ReviewController::class, 'store'])
+    ->middleware('throttle:3,1')
+    ->name('reviews.store');
 
 /*
 |--------------------------------------------------------------------------
