@@ -63,9 +63,9 @@
                                 <div>
                                     <label class="block text-sm font-semibold text-slate-700 mb-2">Grade Seeking *</label>
                                     <select class="input-premium appearance-none">
-                                        <option value="">Select Grade</option>
-                                        @for($i = 1; $i <= 12; $i++)
-                                            <option value="{{ $i }}">Grade {{ $i }}</option>
+                                        <option value="">Select Class</option>
+                                        @for($i = 2; $i <= 8; $i++)
+                                            <option value="{{ $i }}">Class {{ $i }}</option>
                                         @endfor
                                     </select>
                                 </div>
@@ -263,10 +263,10 @@
 
             <div class="space-y-4" x-data="{ openFaq: null }">
                 @foreach([
-                    ['q' => 'What is the admission process?', 'a' => 'Our admission process includes registration, entrance assessment, parent interview, and document verification. The process typically takes 2-3 weeks from application to confirmation.'],
-                    ['q' => 'What curriculum do you follow?', 'a' => 'We follow the CBSE curriculum across all our schools, supplemented with innovative teaching methodologies and holistic development programs.'],
-                    ['q' => 'Is transportation available?', 'a' => 'Yes, we provide GPS-enabled bus transport across the city with trained drivers and attendants. Routes cover most major residential areas.'],
-                    ['q' => 'What extra-curricular activities are offered?', 'a' => 'We offer a wide range including sports, music, dance, drama, art, debate, robotics, yoga, and more. Students can choose activities based on their interests.'],
+                    ['q' => 'What classes do you offer?', 'a' => 'We offer Classes 2nd through 8th with structured preparation for competitive entrance exams like Sainik School, RMS, RIMC, Gurukul, and National-Level Olympiads.'],
+                    ['q' => 'What exams do you prepare students for?', 'a' => 'We prepare students for Sainik School Entrance Exam, Rashtriya Military School (RMS), RIMC, Gurukul Entrance Exams, and national-level Olympiads in Mathematics, Reasoning, English, and General Knowledge.'],
+                    ['q' => 'What is the admission process?', 'a' => 'Contact us at 7206061212 or fill in the enquiry form. Our team will guide you through registration, assessment, and enrollment.'],
+                    ['q' => 'What extra-curricular activities are offered?', 'a' => 'We offer inter-class quizzes, drawing and painting competitions, sports and physical activities, speech and communication skill development, and personality development activities.'],
                 ] as $index => $faq)
                     <div class="border border-slate-200 rounded-2xl overflow-hidden">
                         <button @click="openFaq = openFaq === {{ $index }} ? null : {{ $index }}"

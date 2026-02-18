@@ -98,10 +98,10 @@
                             <span class="badge badge-primary mb-4">About Our School</span>
                             <h2 class="font-display font-bold text-3xl md:text-4xl text-slate-900 mb-6">A School Built for Excellence</h2>
                             <p class="text-slate-600 leading-relaxed mb-6 text-lg">
-                                {{ $school['name'] }} stands as a beacon of educational excellence. Our school combines state-of-the-art infrastructure with time-tested teaching methodologies to create an environment where every student can thrive.
+                                {{ $school['name'] }} is a result-oriented institute focused on building strong academic foundations and preparing students for competitive exams like Sainik School, RMS, RIMC, Gurukul, and National-Level Olympiads.
                             </p>
                             <p class="text-slate-600 leading-relaxed">
-                                With a focus on holistic development, we nurture not just academic excellence but also character, creativity, and critical thinking skills that prepare students for success in the 21st century.
+                                Through our 3-Pillar System — Visual Mastery, Plus-One Strategy, and Small Batch Focus — we train students to excel, compete, and secure top ranks.
                             </p>
                         </div>
                         <div class="relative">
@@ -119,8 +119,8 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <div class="font-bold text-slate-900">CBSE Affiliated</div>
-                                        <div class="text-slate-500 text-sm">Recognized Excellence</div>
+                                        <div class="font-bold text-slate-900">Competitive Prep</div>
+                                        <div class="text-slate-500 text-sm">Sainik, RMS, RIMC</div>
                                     </div>
                                 </div>
                             </div>
@@ -202,8 +202,8 @@
                 {{-- Facilities --}}
                 <div x-show="activeTab === 'facilities'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0">
                     <div class="text-center mb-12">
-                        <span class="badge badge-primary mb-4">World-Class Infrastructure</span>
-                        <h2 class="font-display font-bold text-3xl md:text-4xl text-slate-900">Our Facilities</h2>
+                        <span class="badge badge-primary mb-4">What We Offer</span>
+                        <h2 class="font-display font-bold text-3xl md:text-4xl text-slate-900">Our Highlights</h2>
                     </div>
                     
                     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -215,7 +215,7 @@
                                     </svg>
                                 </div>
                                 <h3 class="font-semibold text-slate-900 text-lg mb-2">{{ $highlight }}</h3>
-                                <p class="text-slate-500 text-sm">World-class {{ strtolower($highlight) }} for comprehensive learning.</p>
+                                <p class="text-slate-500 text-sm">{{ $highlight }}</p>
                             </div>
                         @endforeach
                     </div>
@@ -235,26 +235,26 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
                                 </svg>
                             </div>
-                            <h3 class="font-display font-semibold text-2xl text-slate-900 mb-4">Primary School (Grades 1-5)</h3>
-                            <p class="text-slate-600 mb-6">Foundation years focusing on literacy, numeracy, and discovery-based learning.</p>
+                            <h3 class="font-display font-semibold text-2xl text-slate-900 mb-4">Foundation (Classes 2-4)</h3>
+                            <p class="text-slate-600 mb-6">Building strong academic basics and introducing early competitive preparation.</p>
                             <ul class="space-y-3 text-slate-600">
-                                <li class="flex items-center gap-3"><span class="w-2 h-2 {{ $colors['badge'] }} rounded-full"></span> Activity-based learning</li>
-                                <li class="flex items-center gap-3"><span class="w-2 h-2 {{ $colors['badge'] }} rounded-full"></span> Language development</li>
-                                <li class="flex items-center gap-3"><span class="w-2 h-2 {{ $colors['badge'] }} rounded-full"></span> Creative arts integration</li>
+                                <li class="flex items-center gap-3"><span class="w-2 h-2 {{ $colors['badge'] }} rounded-full"></span> Activity-based and visual learning</li>
+                                <li class="flex items-center gap-3"><span class="w-2 h-2 {{ $colors['badge'] }} rounded-full"></span> Olympiad preparation</li>
+                                <li class="flex items-center gap-3"><span class="w-2 h-2 {{ $colors['badge'] }} rounded-full"></span> Sainik School level questions</li>
                             </ul>
                         </div>
                         <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
                             <div class="w-14 h-14 rounded-2xl {{ $colors['light'] }} flex items-center justify-center mb-6">
                                 <svg class="w-7 h-7 {{ $colors['text'] }}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
                                 </svg>
                             </div>
-                            <h3 class="font-display font-semibold text-2xl text-slate-900 mb-4">Secondary School (Grades 6-10)</h3>
-                            <p class="text-slate-600 mb-6">Comprehensive curriculum aligned with CBSE/ICSE standards.</p>
+                            <h3 class="font-display font-semibold text-2xl text-slate-900 mb-4">Target & Selection (Classes 5-8)</h3>
+                            <p class="text-slate-600 mb-6">Intensive entrance exam preparation with structured test series and mock exams.</p>
                             <ul class="space-y-3 text-slate-600">
-                                <li class="flex items-center gap-3"><span class="w-2 h-2 {{ $colors['badge'] }} rounded-full"></span> Subject specialization</li>
-                                <li class="flex items-center gap-3"><span class="w-2 h-2 {{ $colors['badge'] }} rounded-full"></span> Lab-based sciences</li>
-                                <li class="flex items-center gap-3"><span class="w-2 h-2 {{ $colors['badge'] }} rounded-full"></span> Board exam preparation</li>
+                                <li class="flex items-center gap-3"><span class="w-2 h-2 {{ $colors['badge'] }} rounded-full"></span> Sainik School, RMS, RIMC prep</li>
+                                <li class="flex items-center gap-3"><span class="w-2 h-2 {{ $colors['badge'] }} rounded-full"></span> Speed and accuracy training</li>
+                                <li class="flex items-center gap-3"><span class="w-2 h-2 {{ $colors['badge'] }} rounded-full"></span> Full-length mock tests</li>
                             </ul>
                         </div>
                     </div>
@@ -267,8 +267,8 @@
                         <h2 class="font-display font-bold text-3xl md:text-4xl text-slate-900">Extra-curricular Activities</h2>
                     </div>
                     
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        @foreach(['Sports', 'Music', 'Dance', 'Drama', 'Art', 'Debate', 'Robotics', 'Yoga'] as $activity)
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                        @foreach(['Quizzes', 'Drawing & Painting', 'Sports', 'Speech Skills', 'Personality Development'] as $activity)
                             <div class="group bg-white p-6 rounded-2xl border {{ $colors['border'] }} hover:shadow-lg transition-all text-center card-hover">
                                 <div class="w-12 h-12 mx-auto rounded-xl {{ $colors['light'] }} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                                     <svg class="w-6 h-6 {{ $colors['text'] }}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -289,22 +289,20 @@
                     </div>
                     
                     <div class="bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl p-8 md:p-12">
-                        <div class="grid md:grid-cols-3 gap-8">
-                            @foreach([
-                                ['icon' => 'M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7', 'title' => 'GPS Enabled', 'desc' => 'Real-time tracking for parents'],
-                                ['icon' => 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', 'title' => 'Trained Staff', 'desc' => 'Experienced drivers and attendants'],
-                                ['icon' => 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', 'title' => 'Wide Coverage', 'desc' => 'Multiple routes across the city'],
-                            ] as $feature)
-                                <div class="text-center">
-                                    <div class="w-20 h-20 mx-auto {{ $colors['light'] }} rounded-2xl flex items-center justify-center mb-6">
-                                        <svg class="w-10 h-10 {{ $colors['text'] }}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="{{ $feature['icon'] }}" />
-                                        </svg>
-                                    </div>
-                                    <h3 class="font-bold text-slate-900 text-lg mb-2">{{ $feature['title'] }}</h3>
-                                    <p class="text-slate-600">{{ $feature['desc'] }}</p>
-                                </div>
-                            @endforeach
+                        <div class="text-center max-w-2xl mx-auto">
+                            <div class="w-20 h-20 mx-auto {{ $colors['light'] }} rounded-2xl flex items-center justify-center mb-6">
+                                <svg class="w-10 h-10 {{ $colors['text'] }}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                                </svg>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-lg mb-2">Transport Available</h3>
+                            <p class="text-slate-600">Transport facility is available for students. Please contact the school office for route details and fees.</p>
+                            <a href="tel:{{ $school['phone'] }}" class="btn-primary mt-6 inline-flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                Call for Details
+                            </a>
                         </div>
                     </div>
                 </div>

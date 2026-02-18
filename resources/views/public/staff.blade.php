@@ -1,8 +1,4 @@
 <x-public-layout>
-    @php
-        $leadership = config('schools.leadership');
-    @endphp
-
     {{-- Page Header --}}
     <section class="relative py-24 bg-gradient-to-br from-slate-900 via-primary-900 to-slate-900 overflow-hidden">
         {{-- Background Elements --}}
@@ -20,28 +16,6 @@
             <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto">
                 Meet the dedicated educators and administrators who make our schools a center of excellence.
             </p>
-        </div>
-    </section>
-
-    {{-- Leadership Section --}}
-    <section class="section-padding">
-        <div class="container-custom">
-            <x-public.section-heading title="Leadership Team"
-                subtitle="Visionaries guiding our mission of educational excellence." />
-
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                @foreach($leadership as $leader)
-                    <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm text-center">
-                        <div
-                            class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-                            <span class="text-primary-600 font-bold text-4xl">{{ substr($leader['name'], 0, 1) }}</span>
-                        </div>
-                        <h3 class="font-display font-bold text-xl text-slate-900 mb-1">{{ $leader['name'] }}</h3>
-                        <p class="text-primary-600 font-medium mb-4">{{ $leader['role'] }}</p>
-                        <p class="text-slate-600 text-sm leading-relaxed">{{ $leader['bio'] }}</p>
-                    </div>
-                @endforeach
-            </div>
         </div>
     </section>
 

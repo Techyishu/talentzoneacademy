@@ -113,7 +113,7 @@
                         </h1>
                         <p
                             class="text-base sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
-                            29 years of educational excellence with 4,300+ successful students across 2 premium schools.
+                            Result-oriented education with structured preparation for Sainik School, RMS, RIMC, and Olympiads.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <a href="{{ route('contact') }}"
@@ -161,8 +161,7 @@
                         </h1>
                         <p
                             class="text-base sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
-                            World-class facilities, expert teachers, and a nurturing environment for your child's
-                            success.
+                            Smart teaching methods, personal attention, and structured preparation for competitive success.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <a href="{{ route('schools') }}"
@@ -203,10 +202,10 @@
                         </div>
                         <h1
                             class="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight mb-4 lg:mb-8 text-white drop-shadow-lg">
-                            Join 4,300+ Students
+                            Join the Academy of
                             <span
-                                class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-400">Achieving
-                                Excellence</span>
+                                class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-400">Winners &
+                                Achievers</span>
                         </h1>
                         <p
                             class="text-base sm:text-xl lg:text-2xl text-white/90 mb-8 lg:mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed">
@@ -339,38 +338,34 @@
                     </div>
                 </div>
 
-                {{-- Students Stat --}}
+                {{-- Exams Stat --}}
                 <div class="flex items-center gap-6">
                     <div class="flex-shrink-0 w-20 h-20 rounded-2xl flex items-center justify-center"
                         style="background: linear-gradient(135deg, #FFD23F 0%, #FFC107 100%);">
                         <svg class="w-10 h-10" style="color: #2B2826;" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                         </svg>
                     </div>
                     <div>
-                        <div class="font-display font-bold text-5xl text-white mb-1">4,300+</div>
-                        <div class="text-white/80 text-base leading-tight">Happy Students<br>learning with us</div>
+                        <div class="font-display font-bold text-5xl text-white mb-1">5+</div>
+                        <div class="text-white/80 text-base leading-tight">Competitive Exams<br>we prepare for</div>
                     </div>
                 </div>
 
-                {{-- Teachers Stat --}}
+                {{-- Classes Stat --}}
                 <div class="flex items-center gap-6">
                     <div class="flex-shrink-0 w-20 h-20 rounded-2xl flex items-center justify-center"
                         style="background: linear-gradient(135deg, #10B981 0%, #059669 100%);">
                         <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 14l9-5-9-5-9 5 9 5z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
                     </div>
                     <div>
-                        <div class="font-display font-bold text-5xl text-white mb-1">270+</div>
-                        <div class="text-white/80 text-base leading-tight">Expert Teachers<br>and Staff</div>
+                        <div class="font-display font-bold text-5xl text-white mb-1">2-8</div>
+                        <div class="text-white/80 text-base leading-tight">Classes<br>we teach</div>
                     </div>
                 </div>
             </div>
@@ -389,99 +384,91 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                {{-- Letter Identification --}}
+                {{-- Sainik School Prep --}}
                 <div class="text-center group">
                     <div class="relative mb-6">
                         <div class="w-32 h-32 mx-auto rounded-full flex items-center justify-center relative overflow-hidden"
-                            style="background: linear-gradient(135deg, #60A5FA 0%, #93C5FD 100%);">
-                            <svg class="w-20 h-20 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                    clip-rule="evenodd" />
+                            style="background: linear-gradient(135deg, #E31E24 0%, #FF4444 100%);">
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                             </svg>
                         </div>
-                        {{-- Decorative elements --}}
                         <div class="absolute -top-2 -right-2 w-8 h-8 rounded-full opacity-70"
                             style="background-color: #FFD23F;"></div>
                     </div>
                     <h3 class="font-display font-semibold text-lg mb-2" style="color: #2B2826;">
-                        Letter Identification
+                        Entrance Exam Prep
                     </h3>
-                    <p class="text-sm text-slate-600 mb-3">Learn every letter of the alphabet</p>
+                    <p class="text-sm text-slate-600 mb-3">Sainik School, RMS, RIMC, Gurukul</p>
                     <span class="inline-block px-3 py-1 rounded-full text-xs font-medium"
                         style="background-color: #FFF8F0; color: #FF6B35;">
-                        Pre School
+                        Classes 2-8
                     </span>
                 </div>
 
-                {{-- General Knowledge --}}
+                {{-- Olympiad Training --}}
                 <div class="text-center group">
                     <div class="relative mb-6">
                         <div class="w-32 h-32 mx-auto rounded-full flex items-center justify-center relative overflow-hidden"
                             style="background: linear-gradient(135deg, #FF6B35 0%, #FF8C61 100%);">
-                            <svg class="w-20 h-20 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                    clip-rule="evenodd" />
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
                             </svg>
                         </div>
-                        {{-- Decorative elements --}}
                         <div class="absolute -bottom-2 -left-2 w-6 h-6 rounded-full opacity-70"
                             style="background-color: #10B981;"></div>
                     </div>
                     <h3 class="font-display font-semibold text-lg mb-2" style="color: #2B2826;">
-                        General Knowledge
+                        Olympiad Training
                     </h3>
-                    <p class="text-sm text-slate-600 mb-3">Expanding horizons every day</p>
+                    <p class="text-sm text-slate-600 mb-3">Math, Reasoning, English, GK</p>
                     <span class="inline-block px-3 py-1 rounded-full text-xs font-medium"
                         style="background-color: #FFF8F0; color: #FF6B35;">
-                        Fourth Grade
+                        All Classes
                     </span>
                 </div>
 
-                {{-- Geography Quiz --}}
+                {{-- Smart Panel Learning --}}
                 <div class="text-center group">
                     <div class="relative mb-6">
                         <div class="w-32 h-32 mx-auto rounded-full flex items-center justify-center relative overflow-hidden"
-                            style="background: linear-gradient(135deg, #10B981 0%, #34D399 100%);">
-                            <svg class="w-20 h-20 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                    clip-rule="evenodd" />
+                            style="background: linear-gradient(135deg, #003B71 0%, #0066CC 100%);">
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
                         </div>
-                        {{-- Decorative elements --}}
                         <div class="absolute -top-2 -left-2 w-7 h-7 rounded-full opacity-70"
                             style="background-color: #60A5FA;"></div>
                     </div>
                     <h3 class="font-display font-semibold text-lg mb-2" style="color: #2B2826;">
-                        Geography Quiz
+                        Smart Panel Learning
                     </h3>
-                    <p class="text-sm text-slate-600 mb-3">Discover the world around us</p>
+                    <p class="text-sm text-slate-600 mb-3">Visual and digital teaching methods</p>
                     <span class="inline-block px-3 py-1 rounded-full text-xs font-medium"
                         style="background-color: #FFF8F0; color: #FF6B35;">
-                        First Grade
+                        Visual Mastery
                     </span>
                 </div>
 
-                {{-- Visual Arts Training --}}
+                {{-- Plus-One Strategy --}}
                 <div class="text-center group">
                     <div class="relative mb-6">
                         <div class="w-32 h-32 mx-auto rounded-full flex items-center justify-center relative overflow-hidden"
-                            style="background: linear-gradient(135deg, #FFD23F 0%, #FFC107 100%);">
-                            <svg class="w-20 h-20" style="color: #2B2826;" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                    clip-rule="evenodd" />
+                            style="background: linear-gradient(135deg, #10B981 0%, #34D399 100%);">
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                             </svg>
                         </div>
-                        {{-- Decorative elements --}}
                         <div class="absolute -bottom-2 -right-2 w-8 h-8 rounded-full opacity-70"
                             style="background-color: #FF6B35;"></div>
                     </div>
                     <h3 class="font-display font-semibold text-lg mb-2" style="color: #2B2826;">
-                        Visual Arts Training
+                        Plus-One Strategy
                     </h3>
-                    <p class="text-sm text-slate-600 mb-3">Express creativity through art</p>
+                    <p class="text-sm text-slate-600 mb-3">Always one level ahead of syllabus</p>
                     <span class="inline-block px-3 py-1 rounded-full text-xs font-medium"
                         style="background-color: #FFF8F0; color: #FF6B35;">
-                        Sketching Class
+                        Advanced Prep
                     </span>
                 </div>
             </div>
@@ -723,37 +710,9 @@
                         </div>
                     </div>
                 @empty
-                    @foreach($testimonials as $index => $testimonial)
-                        <div
-                            class="bg-white p-8 rounded-3xl border border-slate-200 hover:shadow-lg transition-shadow duration-300">
-                            {{-- Stars --}}
-                            <div class="flex items-center gap-1 mb-6">
-                                @for($i = 0; $i < 5; $i++)
-                                    <svg class="w-5 h-5" style="color: #FF6B35;" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                    </svg>
-                                @endfor
-                            </div>
-
-                            {{-- Content --}}
-                            <p class="text-slate-600 leading-relaxed mb-8">"{{ $testimonial['content'] }}"</p>
-
-                            {{-- Author --}}
-                            <div class="flex items-center gap-4">
-                                <div class="w-14 h-14 rounded-full flex items-center justify-center"
-                                    style="background: {{ $avatarColors[$index % 3]['bg'] }};">
-                                    <span class="font-bold text-lg" style="color: {{ $avatarColors[$index % 3]['text'] }};">
-                                        {{ substr($testimonial['name'], 0, 1) }}
-                                    </span>
-                                </div>
-                                <div>
-                                    <div class="font-semibold text-slate-900">{{ $testimonial['name'] }}</div>
-                                    <div class="text-slate-500 text-sm">{{ $testimonial['role'] }}</div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
+                    <div class="md:col-span-3 text-center py-12">
+                        <p class="text-slate-500">Reviews coming soon.</p>
+                    </div>
                 @endforelse
             </div>
         </div>
