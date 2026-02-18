@@ -490,16 +490,16 @@
             </div>
 
             {{-- Winning Formula --}}
-            <div class="rounded-3xl p-8 md:p-10 text-center max-w-2xl mx-auto" style="background: linear-gradient(135deg, #E31E24 0%, #DC143C 100%);">
-                <h3 class="font-display font-bold text-2xl mb-6" style="color: #ffffff;">Our Winning Formula</h3>
+            <div class="gradient-warm rounded-3xl p-8 md:p-10 text-center max-w-2xl mx-auto">
+                <h3 class="font-display font-bold text-2xl text-white mb-6">Our Winning Formula</h3>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-base md:text-lg font-bold">
-                    <span class="rounded-xl px-5 py-2.5" style="background: rgba(255,255,255,0.2); color: #ffffff;">Smart Teaching</span>
-                    <span class="text-xl" style="color: #ffffff;">+</span>
-                    <span class="rounded-xl px-5 py-2.5" style="background: rgba(255,255,255,0.2); color: #ffffff;">Extra Practice</span>
-                    <span class="text-xl" style="color: #ffffff;">+</span>
-                    <span class="rounded-xl px-5 py-2.5" style="background: rgba(255,255,255,0.2); color: #ffffff;">Personal Attention</span>
+                    <span class="bg-white/20 rounded-xl px-5 py-2.5 text-white">Smart Teaching</span>
+                    <span class="text-xl text-white">+</span>
+                    <span class="bg-white/20 rounded-xl px-5 py-2.5 text-white">Extra Practice</span>
+                    <span class="text-xl text-white">+</span>
+                    <span class="bg-white/20 rounded-xl px-5 py-2.5 text-white">Personal Attention</span>
                 </div>
-                <p class="mt-6 text-xl font-bold" style="color: #ffffff;">= Big Results</p>
+                <p class="mt-6 text-white text-xl font-bold">= Big Results</p>
             </div>
         </div>
     </section>
