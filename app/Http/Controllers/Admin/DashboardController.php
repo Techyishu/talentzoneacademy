@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Student;
 use App\Models\Staff;
+use App\Models\ContactSubmission;
 use App\Models\FeeReceipt;
 use App\Models\School;
-use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
@@ -42,13 +42,22 @@ class DashboardController extends Controller
             ->whereYear('created_at', date('Y'))
             ->count();
 
+        // Contact submissions (auto-scoped by BelongsToSchool for school admins)
+        $unreadContactCount = ContactSubmission::where('is_read', false)->count();
+        $recentContacts = ContactSubmission::where('is_read', false)
+            ->latest()
+            ->limit(5)
+            ->get();
+
         return view('admin.dashboard', compact(
             'activeSchool',
             'totalStudents',
             'totalStaff',
             'totalSchools',
             'pendingReceipts',
-            'recentReceipts'
+            'recentReceipts',
+            'unreadContactCount',
+            'recentContacts'
         ));
     }
 }

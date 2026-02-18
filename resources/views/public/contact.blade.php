@@ -33,44 +33,62 @@
                             <h2 class="font-display font-bold text-3xl text-slate-900 mb-2">Enquiry Form</h2>
                             <p class="text-slate-500">Fill in the form below and we'll get back to you within 24 hours.</p>
                         </div>
-                        
-                        <form class="space-y-6">
+
+                        @if(session('success'))
+                            <div class="bg-green-50 border border-green-200 text-green-800 rounded-xl p-4 mb-6">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
+                        @if($errors->any())
+                            <div class="bg-red-50 border border-red-200 text-red-800 rounded-xl p-4 mb-6">
+                                <ul class="list-disc list-inside space-y-1">
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
+                        <form method="POST" action="{{ route('contact.store') }}" class="space-y-6">
+                            @csrf
+
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-sm font-semibold text-slate-700 mb-2">Parent's Name *</label>
-                                    <input type="text" placeholder="John Doe" 
-                                        class="input-premium">
+                                    <input type="text" name="name" value="{{ old('name') }}" placeholder="John Doe"
+                                        class="input-premium" required>
                                 </div>
                                 <div>
                                     <label class="block text-sm font-semibold text-slate-700 mb-2">Phone Number *</label>
-                                    <input type="tel" placeholder="+91 98765 43210" 
-                                        class="input-premium">
+                                    <input type="tel" name="phone" value="{{ old('phone') }}" placeholder="+91 98765 43210"
+                                        class="input-premium" required>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-2">Email Address *</label>
-                                <input type="email" placeholder="parent@example.com" 
-                                    class="input-premium">
+                                <input type="email" name="email" value="{{ old('email') }}" placeholder="parent@example.com"
+                                    class="input-premium" required>
                             </div>
-                            
+
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-sm font-semibold text-slate-700 mb-2">Student's Name</label>
-                                    <input type="text" placeholder="Jane Doe" 
+                                    <input type="text" name="student_name" value="{{ old('student_name') }}" placeholder="Jane Doe"
                                         class="input-premium">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-semibold text-slate-700 mb-2">Grade Seeking *</label>
-                                    <select class="input-premium appearance-none">
+                                    <select name="grade" class="input-premium appearance-none" required>
                                         <option value="">Select Class</option>
                                         @for($i = 2; $i <= 8; $i++)
-                                            <option value="{{ $i }}">Class {{ $i }}</option>
+                                            <option value="{{ $i }}" {{ old('grade') == $i ? 'selected' : '' }}>Class {{ $i }}</option>
                                         @endfor
                                     </select>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-2">Preferred School *</label>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -84,7 +102,7 @@
                                             };
                                         @endphp
                                         <label class="relative cursor-pointer">
-                                            <input type="radio" name="school" value="{{ $school['slug'] }}" class="peer sr-only">
+                                            <input type="radio" name="school" value="{{ $school['slug'] }}" class="peer sr-only" {{ old('school') == $school['slug'] ? 'checked' : '' }} required>
                                             <div class="p-4 text-center rounded-xl border-2 border-slate-200 {{ $colorClass }} transition-all hover:border-slate-300">
                                                 <span class="font-medium text-sm">{{ Str::after($school['name'], 'Talent Zone Academy ') }}</span>
                                             </div>
@@ -92,13 +110,13 @@
                                     @endforeach
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-2">Message</label>
-                                <textarea rows="4" placeholder="Tell us how we can help you..." 
-                                    class="input-premium resize-none"></textarea>
+                                <textarea name="message" rows="4" placeholder="Tell us how we can help you..."
+                                    class="input-premium resize-none">{{ old('message') }}</textarea>
                             </div>
-                            
+
                             <button type="submit" class="btn-primary w-full py-4 text-base">
                                 Send Enquiry
                                 <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

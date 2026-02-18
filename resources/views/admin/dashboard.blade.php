@@ -79,14 +79,20 @@
                 </div>
             </div>
         @else
-            <!-- Quick Actions for School Admin -->
-            <div class="card-premium p-3 sm:p-6 flex items-center justify-center">
-                <a href="{{ route('admin.students.create') }}" class="inline-flex items-center px-3 py-1.5 text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-primary-500 rounded-lg shadow-lg">
-                    <svg class="h-4 w-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                    </svg>
-                    Add Student
-                </a>
+            <!-- Unread Enquiries for School Admin -->
+            <div class="card-premium p-3 sm:p-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-xs sm:text-sm font-medium text-slate-600">Enquiries</p>
+                        <p class="mt-1 sm:mt-2 text-xl sm:text-3xl font-bold text-slate-900">{{ $unreadContactCount }}</p>
+                        <p class="text-xs text-slate-500 mt-0.5 sm:mt-1">Unread</p>
+                    </div>
+                    <div class="rounded-lg sm:rounded-xl bg-blue-100 p-2 sm:p-3">
+                        <svg class="h-5 w-5 sm:h-8 sm:w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                </div>
             </div>
         @endif
     </div>
@@ -198,4 +204,37 @@
             @endif
         </div>
     </div>
+
+    <!-- Recent Enquiries -->
+    @if($recentContacts->count() > 0)
+        <div class="card-premium p-4 sm:p-6 mt-4 sm:mt-6">
+            <h2 class="text-sm sm:text-lg font-semibold text-slate-900 mb-3 sm:mb-4">Recent Enquiries</h2>
+            <div class="space-y-2 sm:space-y-3">
+                @foreach($recentContacts as $contact)
+                    <a href="{{ route('admin.contact-submissions.show', $contact) }}" class="flex items-center justify-between p-3 sm:p-4 rounded-lg sm:rounded-xl bg-blue-50/50 hover:bg-blue-50 transition-colors">
+                        <div class="flex items-center space-x-2 sm:space-x-3 min-w-0">
+                            <div class="rounded-lg bg-blue-100 p-1.5 sm:p-2 flex-shrink-0">
+                                <svg class="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="min-w-0">
+                                <p class="text-sm font-medium text-slate-900 truncate">{{ $contact->name }}</p>
+                                <p class="text-xs text-slate-500 truncate">{{ $contact->subject }}</p>
+                            </div>
+                        </div>
+                        <div class="text-right flex-shrink-0 ml-2">
+                            <p class="text-xs sm:text-sm font-medium text-slate-900">{{ $contact->created_at->format('M d') }}</p>
+                            <span class="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">New</span>
+                        </div>
+                    </a>
+                @endforeach
+            </div>
+            <div class="mt-3 sm:mt-4">
+                <a href="{{ route('admin.contact-submissions.index') }}" class="text-xs sm:text-sm font-medium text-primary-600 hover:text-primary-700">
+                    View all enquiries &rarr;
+                </a>
+            </div>
+        </div>
+    @endif
 </x-layouts.admin>

@@ -60,6 +60,10 @@ Route::get('/contact', function () {
     return view('public.contact');
 })->name('contact');
 
+Route::post('/contact', [\App\Http\Controllers\Public\ContactController::class, 'store'])
+    ->middleware('throttle:5,1')
+    ->name('contact.store');
+
 /*
 |--------------------------------------------------------------------------
 | Auth Routes
@@ -113,6 +117,7 @@ use App\Http\Controllers\Admin\PublicReviewController;
 use App\Http\Controllers\Admin\BackgroundMusicController;
 use App\Http\Controllers\Admin\HomepageVideoController;
 use App\Http\Controllers\Admin\PasswordController;
+use App\Http\Controllers\Admin\SchoolAdminController;
 
 
 Route::middleware(['auth', 'set_school'])->prefix('admin')->name('admin.')->group(function () {
@@ -146,8 +151,10 @@ Route::middleware(['auth', 'set_school'])->prefix('admin')->name('admin.')->grou
         Route::put('users/{user}/password', [PasswordController::class, 'updateUser'])->name('users.password.update');
 
         // Schools Management
-        Route::resource('schools', SchoolController::class);
+        Route::resource('schools', SchoolController::class)->except(['create', 'store', 'destroy']);
         Route::get('/schools/{school}/users', [SchoolController::class, 'users'])->name('schools.users');
+        Route::get('/schools/{school}/admins/create', [SchoolAdminController::class, 'create'])->name('schools.admins.create');
+        Route::post('/schools/{school}/admins', [SchoolAdminController::class, 'store'])->name('schools.admins.store');
 
         // Website Content Management (Super Admin)
         Route::get('/public-reviews', [PublicReviewController::class, 'index'])->name('public-reviews.index');

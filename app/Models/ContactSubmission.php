@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\BelongsToSchool;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ContactSubmission extends Model
 {
+    use BelongsToSchool;
+
     /**
      * The attributes that are mass assignable.
      */
@@ -27,14 +29,6 @@ class ContactSubmission extends Model
     protected $casts = [
         'is_read' => 'boolean',
     ];
-
-    /**
-     * Get the school associated with this submission.
-     */
-    public function school(): BelongsTo
-    {
-        return $this->belongsTo(School::class);
-    }
 
     /**
      * Scope to filter only read submissions.

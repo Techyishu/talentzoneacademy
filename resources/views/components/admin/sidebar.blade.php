@@ -133,6 +133,16 @@
                 <span>Salary</span>
             </a>
 
+            <a href="{{ route('admin.contact-submissions.index') }}"
+                class="sidebar-link {{ request()->routeIs('admin.contact-submissions.*') ? 'active' : '' }}">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                    </path>
+                </svg>
+                <span>Enquiries</span>
+            </a>
+
             <div x-data="{ reportsOpen: {{ request()->routeIs('admin.reports.*') ? 'true' : 'false' }} }">
                 <button @click="reportsOpen = !reportsOpen"
                     class="sidebar-link w-full justify-between {{ request()->routeIs('admin.reports.*') ? 'active' : '' }}">
@@ -232,15 +242,6 @@
                             </path>
                         </svg>
                         <span>Gallery</span>
-                    </a>
-                    <a href="{{ route('admin.contact-submissions.index') }}"
-                        class="sidebar-link {{ request()->routeIs('admin.contact-submissions.*') ? 'active' : '' }}">
-                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                            </path>
-                        </svg>
-                        <span>Contact Submissions</span>
                     </a>
                     <a href="{{ route('admin.public-reviews.index') }}"
                         class="sidebar-link {{ request()->routeIs('admin.public-reviews.*') ? 'active' : '' }}">
@@ -374,6 +375,16 @@
                 <span>Salary</span>
             </a>
 
+            <a href="{{ route('admin.contact-submissions.index') }}"
+                class="sidebar-link {{ request()->routeIs('admin.contact-submissions.*') ? 'active' : '' }}">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                    </path>
+                </svg>
+                <span>Enquiries</span>
+            </a>
+
             <div x-data="{ reportsOpen: {{ request()->routeIs('admin.reports.*') ? 'true' : 'false' }} }">
                 <button @click="reportsOpen = !reportsOpen"
                     class="sidebar-link w-full justify-between {{ request()->routeIs('admin.reports.*') ? 'active' : '' }}">
@@ -473,15 +484,6 @@
                             </path>
                         </svg>
                         <span>Gallery</span>
-                    </a>
-                    <a href="{{ route('admin.contact-submissions.index') }}"
-                        class="sidebar-link {{ request()->routeIs('admin.contact-submissions.*') ? 'active' : '' }}">
-                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                            </path>
-                        </svg>
-                        <span>Contact Submissions</span>
                     </a>
                     <a href="{{ route('admin.public-reviews.index') }}"
                         class="sidebar-link {{ request()->routeIs('admin.public-reviews.*') ? 'active' : '' }}">

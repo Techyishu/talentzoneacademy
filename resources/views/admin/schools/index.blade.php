@@ -1,17 +1,9 @@
 <x-layouts.admin>
     <div class="space-y-6">
         <!-- Header -->
-        <div class="flex justify-between items-center">
-            <div>
-                <h1 class="text-3xl font-bold text-gray-900">Schools Management</h1>
-                <p class="mt-1 text-sm text-gray-600">Manage all schools in the system</p>
-            </div>
-            <a href="{{ route('admin.schools.create') }}" class="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors duration-150">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
-                </svg>
-                Add School
-            </a>
+        <div>
+            <h1 class="text-3xl font-bold text-gray-900">Schools Management</h1>
+            <p class="mt-1 text-sm text-gray-600">Manage all schools in the system</p>
         </div>
 
         <!-- Schools Grid -->
@@ -86,15 +78,6 @@
                             <a href="{{ route('admin.schools.edit', $school) }}" class="flex-1 text-center px-3 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition-colors duration-150">
                                 Edit
                             </a>
-                            <form action="{{ route('admin.schools.destroy', $school) }}" method="POST" class="inline" onsubmit="return confirm('Are you sure? This will delete ALL data for this school including students, staff, and receipts. This action cannot be undone.');">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors duration-150">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
-                                    </svg>
-                                </button>
-                            </form>
                         </div>
                     </div>
                 @endforeach

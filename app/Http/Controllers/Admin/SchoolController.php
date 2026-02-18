@@ -3,11 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreSchoolRequest;
 use App\Http\Requests\UpdateSchoolRequest;
 use App\Models\School;
-use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Laravel\Facades\Image;
 
@@ -23,37 +20,6 @@ class SchoolController extends Controller
             ->get();
 
         return view('admin.schools.index', compact('schools'));
-    }
-
-    /**
-     * Show the form for creating a new school
-     */
-    public function create()
-    {
-        return view('admin.schools.create');
-    }
-
-    /**
-     * Store a newly created school
-     */
-    public function store(StoreSchoolRequest $request)
-    {
-        $data = $request->validated();
-
-        // Handle logo upload
-        if ($request->hasFile('logo')) {
-            $data['logo'] = $this->uploadLogo($request->file('logo'));
-        }
-
-        // Handle signature upload
-        if ($request->hasFile('signature_image')) {
-            $data['signature_image'] = $this->uploadSignature($request->file('signature_image'));
-        }
-
-        School::create($data);
-
-        return redirect()->route('admin.schools.index')
-            ->with('success', 'School created successfully.');
     }
 
     /**
@@ -111,27 +77,6 @@ class SchoolController extends Controller
 
         return redirect()->route('admin.schools.index')
             ->with('success', 'School updated successfully.');
-    }
-
-    /**
-     * Remove the specified school
-     */
-    public function destroy(School $school)
-    {
-        // Delete logo if exists
-        if ($school->logo) {
-            Storage::disk('public')->delete($school->logo);
-        }
-
-        // Delete signature if exists
-        if ($school->signature_image) {
-            Storage::disk('public')->delete($school->signature_image);
-        }
-
-        $school->delete();
-
-        return redirect()->route('admin.schools.index')
-            ->with('success', 'School deleted successfully. All related data has been removed.');
     }
 
     /**
