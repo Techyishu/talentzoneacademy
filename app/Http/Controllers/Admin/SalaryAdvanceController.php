@@ -17,7 +17,7 @@ class SalaryAdvanceController extends Controller
         $status = $request->get('status');
         $staffId = $request->get('staff_id');
 
-        $query = SalaryAdvance::where('school_id', session('school_id'))
+        $query = SalaryAdvance::where('school_id', session('active_school_id'))
             ->with('staff')
             ->when($status, fn($q) => $q->where('status', $status))
             ->when($staffId, fn($q) => $q->where('staff_id', $staffId))
@@ -25,15 +25,15 @@ class SalaryAdvanceController extends Controller
 
         $advances = $query->paginate(20);
 
-        $staff = Staff::where('school_id', session('school_id'))
+        $staff = Staff::where('school_id', session('active_school_id'))
             ->where('status', 'active')
             ->orderBy('name')
             ->get();
 
         $stats = [
-            'total' => SalaryAdvance::where('school_id', session('school_id'))->sum('amount'),
-            'recovered' => SalaryAdvance::where('school_id', session('school_id'))->sum('recovered_amount'),
-            'pending' => SalaryAdvance::where('school_id', session('school_id'))
+            'total' => SalaryAdvance::where('school_id', session('active_school_id'))->sum('amount'),
+            'recovered' => SalaryAdvance::where('school_id', session('active_school_id'))->sum('recovered_amount'),
+            'pending' => SalaryAdvance::where('school_id', session('active_school_id'))
                 ->whereIn('status', ['pending', 'approved'])
                 ->selectRaw('SUM(amount - recovered_amount) as balance')
                 ->value('balance') ?? 0,
@@ -47,7 +47,7 @@ class SalaryAdvanceController extends Controller
      */
     public function create()
     {
-        $staff = Staff::where('school_id', session('school_id'))
+        $staff = Staff::where('school_id', session('active_school_id'))
             ->where('status', 'active')
             ->orderBy('name')
             ->get();
@@ -69,7 +69,7 @@ class SalaryAdvanceController extends Controller
         ]);
 
         SalaryAdvance::create([
-            'school_id' => session('school_id'),
+            'school_id' => session('active_school_id'),
             'staff_id' => $validated['staff_id'],
             'amount' => $validated['amount'],
             'advance_date' => $validated['advance_date'],

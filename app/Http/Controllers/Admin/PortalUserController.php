@@ -19,7 +19,7 @@ class PortalUserController extends Controller
     {
         $type = $request->get('type', 'all');
 
-        $query = User::where('school_id', session('school_id'))
+        $query = User::where('school_id', session('active_school_id'))
             ->whereIn('role', ['staff', 'student', 'parent']);
 
         if ($type !== 'all') {
@@ -31,9 +31,9 @@ class PortalUserController extends Controller
             ->paginate(20);
 
         $stats = [
-            'staff' => User::where('school_id', session('school_id'))->where('role', 'staff')->count(),
-            'student' => User::where('school_id', session('school_id'))->where('role', 'student')->count(),
-            'parent' => User::where('school_id', session('school_id'))->where('role', 'parent')->count(),
+            'staff' => User::where('school_id', session('active_school_id'))->where('role', 'staff')->count(),
+            'student' => User::where('school_id', session('active_school_id'))->where('role', 'student')->count(),
+            'parent' => User::where('school_id', session('active_school_id'))->where('role', 'parent')->count(),
         ];
 
         return view('admin.portal-users.index', compact('users', 'type', 'stats'));
@@ -51,19 +51,19 @@ class PortalUserController extends Controller
 
         if ($type === 'staff') {
             // Get staff without user accounts
-            $staff = Staff::where('school_id', session('school_id'))
+            $staff = Staff::where('school_id', session('active_school_id'))
                 ->whereDoesntHave('user')
                 ->orderBy('name')
                 ->get();
         } elseif ($type === 'student') {
             // Get students without user accounts
-            $students = Student::where('school_id', session('school_id'))
+            $students = Student::where('school_id', session('active_school_id'))
                 ->whereDoesntHave('user')
                 ->orderBy('name')
                 ->get();
         } elseif ($type === 'parent') {
             // Get students for parent linking
-            $students = Student::where('school_id', session('school_id'))
+            $students = Student::where('school_id', session('active_school_id'))
                 ->with(['schoolClass', 'schoolSection'])
                 ->orderBy('name')
                 ->get();
@@ -104,7 +104,7 @@ class PortalUserController extends Controller
             'email' => $validated['email'],
             'password' => Hash::make($validated['password']),
             'role' => $type,
-            'school_id' => session('school_id'),
+            'school_id' => session('active_school_id'),
             'staff_id' => $type === 'staff' ? $validated['staff_id'] : null,
             'student_id' => $type === 'student' ? $validated['student_id'] : null,
         ]);
@@ -137,7 +137,7 @@ class PortalUserController extends Controller
      */
     public function edit(User $portalUser)
     {
-        $students = Student::where('school_id', session('school_id'))
+        $students = Student::where('school_id', session('active_school_id'))
             ->with(['schoolClass', 'schoolSection'])
             ->orderBy('name')
             ->get();

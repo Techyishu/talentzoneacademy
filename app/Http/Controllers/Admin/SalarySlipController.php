@@ -21,7 +21,7 @@ class SalarySlipController extends Controller
         $year = $request->get('year', date('Y'));
         $status = $request->get('status');
 
-        $query = SalarySlip::where('school_id', session('school_id'))
+        $query = SalarySlip::where('school_id', session('active_school_id'))
             ->with('staff')
             ->when($month, fn($q) => $q->where('month', $month))
             ->when($year, fn($q) => $q->where('year', $year))
@@ -31,13 +31,13 @@ class SalarySlipController extends Controller
         $salarySlips = $query->paginate(20);
 
         $stats = [
-            'total' => SalarySlip::where('school_id', session('school_id'))
+            'total' => SalarySlip::where('school_id', session('active_school_id'))
                 ->where('month', $month)->where('year', $year)->count(),
-            'paid' => SalarySlip::where('school_id', session('school_id'))
+            'paid' => SalarySlip::where('school_id', session('active_school_id'))
                 ->where('month', $month)->where('year', $year)->where('status', 'paid')->count(),
-            'pending' => SalarySlip::where('school_id', session('school_id'))
+            'pending' => SalarySlip::where('school_id', session('active_school_id'))
                 ->where('month', $month)->where('year', $year)->whereIn('status', ['draft', 'generated'])->count(),
-            'total_amount' => SalarySlip::where('school_id', session('school_id'))
+            'total_amount' => SalarySlip::where('school_id', session('active_school_id'))
                 ->where('month', $month)->where('year', $year)->where('status', 'paid')->sum('net_salary'),
         ];
 
@@ -53,12 +53,12 @@ class SalarySlipController extends Controller
         $year = $request->get('year', date('Y'));
 
         // Get staff who don't have salary slips for this month
-        $existingStaffIds = SalarySlip::where('school_id', session('school_id'))
+        $existingStaffIds = SalarySlip::where('school_id', session('active_school_id'))
             ->where('month', $month)
             ->where('year', $year)
             ->pluck('staff_id');
 
-        $staff = Staff::where('school_id', session('school_id'))
+        $staff = Staff::where('school_id', session('active_school_id'))
             ->where('status', 'active')
             ->whereNotIn('id', $existingStaffIds)
             ->orderBy('name')
@@ -81,7 +81,7 @@ class SalarySlipController extends Controller
             'allowances.*' => 'nullable|numeric|min:0',
         ]);
 
-        $schoolId = session('school_id');
+        $schoolId = session('active_school_id');
         $generated = 0;
 
         foreach ($validated['staff_ids'] as $staffId) {
