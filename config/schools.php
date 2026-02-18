@@ -28,6 +28,11 @@ return [
                 'Entrance Exam Preparation',
                 'Olympiad Training',
             ],
+            'chairman' => [
+                'name' => 'Mr. Sanjeev Kumar',
+                'message' => 'Education is the most powerful investment we can make in our children. At Talent Zone Academy, we have created an environment where every student is encouraged to dream big, work hard, and achieve excellence. Our vision is to shape young minds into disciplined, confident, and competitive individuals who are ready to take on any challenge life presents.',
+                'image' => '/images/staff/chairman.jpg',
+            ],
             'md' => [
                 'name' => 'Er. Arvind Dahiya',
                 'message' => 'At Talent Zone Academy, we believe every child has the potential to achieve greatness. Our mission is to provide result-oriented education that builds strong foundations, sharpens competitive skills, and nurtures confident individuals ready to take on any challenge. We are committed to giving every student the tools, guidance, and personal attention they need to succeed.',
@@ -51,6 +56,11 @@ return [
                 'Small Batch Sizes',
                 'Entrance Exam Preparation',
                 'Olympiad Training',
+            ],
+            'chairman' => [
+                'name' => 'Mr. Sanjeev Kumar',
+                'message' => 'Education is the most powerful investment we can make in our children. At Talent Zone Academy, we have created an environment where every student is encouraged to dream big, work hard, and achieve excellence. Our vision is to shape young minds into disciplined, confident, and competitive individuals who are ready to take on any challenge life presents.',
+                'image' => '/images/staff/chairman.jpg',
             ],
             'md' => [
                 'name' => 'Er. Arvind Dahiya',

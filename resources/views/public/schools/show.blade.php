@@ -128,6 +128,30 @@
                     </div>
 
 
+                    @if(isset($school['chairman']))
+                    {{-- Chairman's Message --}}
+                    <div class="relative bg-gradient-to-br from-amber-50 to-yellow-50 rounded-3xl p-8 md:p-12 overflow-hidden mb-8">
+                        {{-- Decorative --}}
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-amber-200 rounded-full filter blur-3xl opacity-30"></div>
+
+                        <div class="relative flex flex-col md:flex-row gap-8 items-start">
+                            <div class="w-32 h-32 rounded-2xl overflow-hidden shadow-lg border-4 border-white flex-shrink-0">
+                                <img src="{{ asset($school['chairman']['image']) }}" alt="{{ $school['chairman']['name'] }}" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <span class="badge badge-primary mb-4 bg-amber-600 text-white border-amber-700">Chairman's Message</span>
+                                <p class="text-slate-700 text-xl italic leading-relaxed mb-6">
+                                    "{{ $school['chairman']['message'] }}"
+                                </p>
+                                <div>
+                                    <div class="font-bold text-slate-900 text-lg">{{ $school['chairman']['name'] }}</div>
+                                    <div class="text-slate-500">Chairman</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
+
                     @if(isset($school['md']))
                     {{-- Managing Director's Message --}}
                     <div class="relative bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-8 md:p-12 overflow-hidden mb-8">
