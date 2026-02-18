@@ -67,6 +67,11 @@ return [
                 'message' => 'Our vision is to empower students with knowledge and skills that go beyond textbooks. We are committed to fostering a learning environment where innovation meets tradition, preparing our students to be the leaders of tomorrow.',
                 'image' => '/images/staff/md.jpg',
             ],
+            'academic_director' => [
+                'name' => 'Mr. Lalit Dahiya',
+                'message' => 'Academic excellence is the cornerstone of our institution. We strive to create a nurturing environment where every student is encouraged to think critically, learn passionately, and grow into confident individuals ready to face the challenges of tomorrow.',
+                'image' => '/images/staff/academic-director-kurukshetra.jpg',
+            ],
         ],
     ],
 
